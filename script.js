@@ -21,7 +21,8 @@ function renderProducts(filter = 'All', expanded = false) {
   productGrid.innerHTML = visible.map((item, index) => `
     <article class="product-card">
       <a class="product-image ${item.color}" href="${item.link}" target="_blank" rel="sponsored nofollow noopener" aria-label="View ${item.title} on Amazon">
-        <span class="product-badge">${item.badge}</span><span class="product-symbol">${item.symbol}</span>
+        <span class="product-badge">${item.badge}</span>
+        <img class="product-photo" src="${item.image}" alt="${item.title}" loading="lazy" decoding="async" />
         <button class="save-button" aria-label="Save ${item.title}" data-save="${index}">♡</button>
       </a>
       <p class="product-category">${item.category}</p><h3>${item.title}</h3>
