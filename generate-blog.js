@@ -1,0 +1,80 @@
+const fs = require('fs');
+const path = require('path');
+const vm = require('vm');
+
+const context = { window: {} };
+vm.createContext(context);
+vm.runInContext(fs.readFileSync('content.js', 'utf8'), context);
+const { products } = context.window.siteContent;
+const out = path.join(__dirname, 'blog');
+fs.mkdirSync(out, { recursive: true });
+
+const slugify = value => value.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const categoryCopy = {
+  'Home': { intro: 'A home upgrade earns its place when it adds comfort without adding clutter.', use: 'living rooms, bedrooms, first apartments, and thoughtful housewarming gifts', tip: 'Start with the spot you use most and let this piece solve one clear need there.' },
+  'Lifestyle': { intro: 'The best lifestyle finds make an ordinary routine noticeably easier.', use: 'busy mornings, daily routines, travel days, and practical gifting', tip: 'Keep it where the habit already happens so it becomes part of your routine naturally.' },
+  'Seasonal': { intro: 'Seasonal decorating feels best when a few flexible pieces create the mood.', use: 'fall refreshes, cozy gatherings, hosting, and quick room updates', tip: 'Pair it with warm neutrals and natural textures instead of changing the whole room.' },
+  'Dorm & Apartment': { intro: 'In a smaller space, every product should solve a real problem and be easy to live with.', use: 'college dorms, studio apartments, shared rooms, and compact bedrooms', tip: 'Measure your available space first, especially around outlets, doors, and under-bed storage.' },
+  'Beauty & Wellness': { intro: 'A good self-care find should be simple enough to use consistently and enjoyable enough to look forward to.', use: 'morning routines, low-effort resets, getting ready, and gift baskets', tip: 'Introduce one new step at a time and follow the product directions for your skin, hair, or routine.' },
+  'Tech & Gadgets': { intro: 'Useful technology should remove friction instead of creating another thing to manage.', use: 'desks, dorm rooms, travel kits, study sessions, and everyday entertainment', tip: 'Check device compatibility, dimensions, and charging requirements before ordering.' }
+};
+
+const details = [
+  ['soft, flameless candlelight with convenient timing and brightness control', 'anyone who loves candles but wants a cleaner, low-fuss way to enjoy them', 'Use the timer during evening wind-down time and choose a brightness that matches the room.'],
+  ['a warm, tactile layer that makes a couch or bed instantly more inviting', 'cozy-home lovers, movie nights, guest rooms, and easy seasonal refreshes', 'Fold it over the arm of a sofa or layer it at the foot of the bed for an effortless styled look.'],
+  ['attractive storage that can hide everyday clutter while still looking intentional', 'blankets, toys, laundry, entryways, and open shelving', 'Group the baskets together for a coordinated look, or split them across rooms where clutter collects.'],
+  ['customizable ambient color that can shift from focused task lighting to a relaxed evening glow', 'desks, bedside tables, gaming setups, and mood lighting', 'Save a few favorite scenes instead of constantly changing colors; it makes the lamp faster to use daily.'],
+  ['a simple decorative accent that adds height, texture, and a finished feeling to a shelf or table', 'minimal interiors, coffee tables, bookshelves, and easy gifting', 'Style the vases in an uneven group and add just one or two stems so the arrangement stays clean.'],
+  ['high-capacity hydration with a handle and straw for easy everyday use', 'commutes, long classes, workouts, road trips, and desk days', 'Choose a size that fits your cupholder and cleaning routine, not just the biggest option.'],
+  ['two drinking styles in one insulated bottle, making hydration easy without removing the lid', 'school, work, the gym, travel, and outdoor days', 'Use the built-in straw for everyday sipping and the wider opening when you want faster flow.'],
+  ['organized compartments that keep toiletries visible and easier to pack', 'weekend trips, shared bathrooms, dorms, and frequent travelers', 'Keep travel-size staples packed between trips so getting ready to leave takes less time.'],
+  ['a gentler wake-up routine that combines gradual light with calming sound', 'light sleepers, dark mornings, bedside routines, and screen-free wind-downs', 'Give the routine several days before judging it; consistent sleep and wake settings usually work best.'],
+  ['a clear weekly view that turns goals, appointments, and priorities into an actionable plan', 'students, busy schedules, goal setting, and Sunday resets', 'Choose three priorities for the week before filling smaller tasks into the remaining space.'],
+  ['soft corduroy texture and a rich warm color that changes a room without replacing furniture', 'sofas, beds, reading corners, and quick autumn decorating', 'Use the covers over inserts you already own, then store them flat when the season changes.'],
+  ['a cozy knit layer in a warm fall tone that works as decor and an everyday blanket', 'cool evenings, guest rooms, sofas, and seasonal photos', 'Mix it with cream, brown, olive, or charcoal so the color feels elevated rather than overly themed.'],
+  ['a familiar autumn fragrance in a classic jar that sets the mood quickly', 'entryways, living rooms, gifting, and fall traditions', 'Trim the wick as directed and never leave a burning candle unattended.'],
+  ['flexible fall greenery that adds color along mantels, shelves, tables, or door frames', 'apartments, party backdrops, tablescapes, and reusable seasonal decor', 'Fluff and bend the stems after unpacking, then secure the garland in a few discreet spots.'],
+  ['an easy textural layer that makes an everyday table feel ready for fall', 'dining tables, consoles, coffee tables, and casual hosting', 'Let the ends drape naturally and keep the centerpiece low so the table remains functional.'],
+  ['vertical storage that rolls where it is needed and tucks away when it is not', 'snacks, beauty products, school supplies, kitchens, and bathrooms', 'Assign each tier a purpose and avoid overfilling the top so the cart stays easy to move.'],
+  ['reachable bedside storage without using valuable floor space', 'lofted beds, bunk beds, dorm rooms, and small bedrooms', 'Keep only nighttime essentials inside so it does not become another clutter zone.'],
+  ['a roomy place to contain laundry while keeping a small room looking calmer', 'dorms, bedrooms, shared laundry rooms, and apartments', 'Use a washable liner or bag to make laundry trips faster and keep the hamper cleaner.'],
+  ['a slim profile and nonslip surface that help a closet hold more while clothes stay in place', 'small closets, capsule wardrobes, dorms, and closet refreshes', 'Switch one clothing section at a time to keep the project manageable and consistent.'],
+  ['more reachable power for phones, lamps, laptops, and other everyday devices', 'desks, bedside setups, dorms, travel, and older apartments', 'Never exceed the rated load, and check your housing rules before using extension products in a dorm.'],
+  ['soft overnight styling that can reduce the need for morning heat tools', 'long hair, low-effort routines, travel, and getting ready faster', 'Start with slightly damp—not wet—hair and adjust the wrap tension for comfort.'],
+  ['a cool, soothing massage that can make a morning routine feel more refreshing', 'tired-looking mornings, self-care routines, travel, and post-workout cooldowns', 'Use light pressure, keep the roller clean, and avoid using it over irritated or injured skin.'],
+  ['physical exfoliation with a tropical scent and a rich, spa-like texture', 'shower routines, pre-event prep, and affordable self-care gifts', 'Use gently on wet skin and follow with moisturizer; avoid freshly shaved or irritated areas.'],
+  ['a rich, scented body cream that turns basic moisturizing into a more luxurious ritual', 'dry-skin routines, fragrance layering, travel minis, and gifting', 'Apply after showering while skin is slightly damp to help seal in moisture.'],
+  ['a luminous complexion enhancer that can be worn alone, mixed, or layered with makeup', 'glowy makeup looks, quick routines, and versatile beauty bags', 'Begin with a small amount and build only where you want extra radiance.'],
+  ['a compact charging station designed to reduce cable clutter across multiple Apple devices', 'nightstands, desks, travel bags, and streamlined charging setups', 'Confirm your exact phone, watch, and earbud models are compatible before purchasing.'],
+  ['portable sound in a compact, durable package that is easy to carry', 'small gatherings, dorm rooms, patios, travel, and everyday listening', 'Keep the volume appropriate for shared spaces and charge it before taking it out.'],
+  ['hands-free phone positioning with a flexible arm that can be adjusted for viewing', 'recipes, video calls, watching content, bedsides, and desks', 'Attach it to a stable surface and bend the arm with both hands to reduce wobble.'],
+  ['reusable handwritten pages that can connect analog note-taking with digital organization', 'classes, meetings, planning, and reducing paper clutter', 'Set up a consistent folder and naming system before scanning your first full notebook.'],
+  ['customizable accent lighting that can transform a desk, wall, or entertainment area', 'dorm rooms, gaming setups, bedrooms, and content backdrops', 'Clean and dry the surface first, then test the full strip before removing the adhesive backing.']
+];
+
+const disclosure = 'This post contains affiliate links. If you purchase through one of our links, The Find List may earn a commission at no extra cost to you.';
+const header = `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="../site-pages.css">`;
+const nav = `<div class="announcement">Fresh finds, thoughtful picks, zero endless scrolling.</div><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">TF</span><span>The Find List</span></a><nav class="nav-links"><a href="../index.html#categories">Categories</a><a href="../index.html#trending">Trending</a><a href="index.html">The Edit</a></nav><a class="blog-home-link" href="../index.html">Back home</a></header>`;
+const footer = `<footer><div class="footer-bottom"><span>© ${new Date().getFullYear()} The Find List</span><div class="legal-footer-links"><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../affiliate-disclosure.html">Affiliate disclosure</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer></body></html>`;
+
+products.forEach((product, index) => {
+  const slug = slugify(product.title);
+  const [feature, bestFor, practicalTip] = details[index];
+  const common = categoryCopy[product.category];
+  const description = `A practical look at the ${product.title}, why it stands out, and whether it belongs on your list.`;
+  const html = `${header}<title>${product.title}: Is It Worth Adding to Your List? | The Find List</title><meta name="description" content="${description}"></head><body>${nav}
+  <main class="post-page"><article><div class="post-kicker"><a href="index.html">THE EDIT</a> / ${product.category.toUpperCase()}</div><h1>${product.title}: a closer look at this ${product.category.toLowerCase()} find</h1><p class="post-deck">${description}</p><p class="post-disclosure">${disclosure}</p>
+  <div class="post-hero ${product.color}"><span>${product.symbol}</span><small>${product.badge}</small></div>
+  <div class="post-body"><p class="lead">${common.intro} The <strong>${product.title}</strong> caught our attention because it offers ${feature}.</p>
+  <h2>Why it made The Find List</h2><p>We look for products with a clear purpose, an appealing presentation, and enough everyday usefulness to inspire more than an impulse click. This find fits that approach: it can make a visible or practical difference without requiring a complicated setup or a complete lifestyle overhaul.</p><p>It is especially well suited to ${bestFor}. That makes it easy to feature in a focused gift guide, room refresh, routine reset, or collection of genuinely useful finds.</p>
+  <h2>How to get the most from it</h2><p>${practicalTip} ${common.tip} Small choices like placement, routine, and compatibility often determine whether a product becomes a favorite or gets forgotten.</p>
+  <h2>What to check before ordering</h2><p>Review the current Amazon listing for dimensions, materials, included accessories, color choices, care instructions, and recent customer feedback. Product details and availability can change, so confirm that the selected variation fits your space and needs before purchasing.</p>
+  <div class="post-verdict"><p class="eyebrow">The quick take</p><h2>Who should add it to their list?</h2><p>If you want ${feature}, this is a strong product to compare. It is a particularly natural fit for ${common.use}.</p><a class="button primary" href="${product.link}" target="_blank" rel="sponsored nofollow noopener">Check it out on Amazon</a><small>Price and availability may change.</small></div>
+  <p class="post-note"><strong>Our approach:</strong> The Find List shares curated ideas and shopping inspiration. Always choose products based on your own needs, budget, space, and the latest listing information.</p></div></article>
+  <aside class="more-finds"><p class="eyebrow">Keep browsing</p><h2>More from ${product.category}</h2><div>${products.filter(p => p.category === product.category && p.title !== product.title).slice(0,3).map(p => `<a href="${slugify(p.title)}.html"><span>${p.badge}</span><strong>${p.title}</strong> →</a>`).join('')}</div></aside></main>${footer}`;
+  fs.writeFileSync(path.join(out, `${slug}.html`), html);
+});
+
+const cards = products.map(product => `<article class="blog-card"><a class="blog-card-art ${product.color}" href="${slugify(product.title)}.html"><span>${product.symbol}</span><small>${product.badge}</small></a><p>${product.category}</p><h2><a href="${slugify(product.title)}.html">${product.title}</a></h2><a class="text-link" href="${slugify(product.title)}.html">Read the guide <span>→</span></a></article>`).join('');
+fs.writeFileSync(path.join(out, 'index.html'), `${header}<title>The Edit | The Find List</title><meta name="description" content="Helpful guides to all 30 curated products on The Find List."></head><body>${nav}<main class="blog-index"><div class="blog-index-head"><p class="eyebrow">The Find List Edit</p><h1>Ideas, guides, and finds worth saving.</h1><p>Explore practical notes on every product currently featured on The Find List.</p></div><div class="blog-grid">${cards}</div></main>${footer}`);
+console.log(`Generated ${products.length} product guides plus the blog index.`);

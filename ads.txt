@@ -1,0 +1,2 @@
+# Add the exact Google AdSense authorized-seller record here after approval.
+# Example format only: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
