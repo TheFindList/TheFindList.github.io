@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ab6243"/><stop offset="1" stop-color="#6e8064"/></linearGradient></defs>
+<rect width="1000" height="1500" fill="url(#g)"/>
+<circle cx="790" cy="1060" r="330" fill="none" stroke="#f7ede1" stroke-opacity=".28" stroke-width="120"/>
+<text x="80" y="110" fill="#fff" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="5">THE FIND LIST</text>
+<text x="80" y="380" fill="#fff" font-family="Georgia,serif" font-size="94" font-weight="700"><tspan x="80">COZY HOME</tspan><tspan x="80" dy="112">FINDS</tspan></text>
+<text x="80" y="660" fill="#fff" font-family="Arial,sans-serif" font-size="34">Small upgrades, major comfort</text>
+<text x="80" y="1370" fill="#fff" font-family="Arial,sans-serif" font-size="26" font-weight="700" letter-spacing="3">TAP TO SHOP • THEFINDLIST.GITHUB.IO</text>
+</svg>
