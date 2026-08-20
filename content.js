@@ -19,11 +19,11 @@ window.siteContent = {
     { title: "Stanley Quencher H2.0 FlowState Tumbler", category: "Lifestyle", price: "Daily essential", badge: "MOST LOVED", color: "rose", symbol: "↗", link: "https://amzn.to/4wDQVze" },
     { title: "Owala FreeSip Insulated Water Bottle", category: "Lifestyle", price: "On-the-go pick", badge: "POPULAR", color: "sage", symbol: "⌁", link: "https://amzn.to/4quwmDR" },
     { title: "BAGSMART Travel Toiletry Bag", category: "Lifestyle", price: "Travel favorite", badge: "SMART FIND", color: "sand", symbol: "▦", link: "https://amzn.to/4zuRHRC" },
-    { title: "Hatch Restore Sound Machine & Sunrise Alarm", category: "Lifestyle", price: "Morning upgrade", badge: "WELLNESS", color: "oat", symbol: "☼", link: "https://amzn.to/4qsp3fP" },
+    { title: "Hatch Restore Sound Machine & Sunrise Alarm", category: "Lifestyle", categories: ["Lifestyle", "Beauty & Wellness", "Tech & Gadgets"], price: "Morning upgrade", badge: "WELLNESS", color: "oat", symbol: "☼", link: "https://amzn.to/4qsp3fP" },
     { title: "Clever Fox Premium Weekly Planner", category: "Lifestyle", price: "Get organized", badge: "EDITOR PICK", color: "olive", symbol: "✓", link: "https://amzn.to/4qx1JxQ" },
 
-    { title: "MIULEE Burnt-Orange Corduroy Pillow Covers", category: "Seasonal", price: "Fall refresh", badge: "FALL FAVORITE", color: "terracotta", symbol: "⌂", link: "https://amzn.to/3UKOwFx" },
-    { title: "Bedsure Burnt-Orange Knit Throw Blanket", category: "Seasonal", price: "Cozy seasonal pick", badge: "MOST SAVED", color: "sand", symbol: "≈", link: "https://amzn.to/3Slsc4v" },
+    { title: "MIULEE Burnt-Orange Corduroy Pillow Covers", category: "Seasonal", categories: ["Seasonal", "Home", "Dorm & Apartment"], price: "Fall refresh", badge: "FALL FAVORITE", color: "terracotta", symbol: "⌂", link: "https://amzn.to/3UKOwFx" },
+    { title: "Bedsure Burnt-Orange Knit Throw Blanket", category: "Seasonal", categories: ["Seasonal", "Home", "Dorm & Apartment"], price: "Cozy seasonal pick", badge: "MOST SAVED", color: "sand", symbol: "≈", link: "https://amzn.to/3Slsc4v" },
     { title: "Yankee Candle Autumn Wreath Large Jar Candle", category: "Seasonal", price: "Classic fall scent", badge: "SEASONAL", color: "gold", symbol: "☼", link: "https://amzn.to/4cRfnWF" },
     { title: "Winemana Eucalyptus & Fall Leaf Garland", category: "Seasonal", price: "Easy decor update", badge: "FALL DECOR", color: "olive", symbol: "⌁", link: "https://amzn.to/4xdPlFq" },
     { title: "FEXIA Boho Fall Table Runner", category: "Seasonal", price: "Tabletop favorite", badge: "HOSTING PICK", color: "oat", symbol: "≈", link: "https://amzn.to/4gIU6Rm" },
@@ -32,7 +32,7 @@ window.siteContent = {
     { title: "Dormify Bedside Caddy", category: "Dorm & Apartment", price: "Bedside organizer", badge: "SPACE SAVER", color: "blue", symbol: "□", link: "https://amzn.to/4ielSq8" },
     { title: "Lifewit Large Laundry Hamper", category: "Dorm & Apartment", price: "Everyday essential", badge: "PRACTICAL PICK", color: "cream", symbol: "⌂", link: "https://amzn.to/46bKpVs" },
     { title: "Amazon Basics Velvet Nonslip Hangers", category: "Dorm & Apartment", price: "Closet upgrade", badge: "BEST VALUE", color: "rose", symbol: "⌁", link: "https://amzn.to/4qvhaqj" },
-    { title: "Power Strip with USB & Extension Cord", category: "Dorm & Apartment", price: "Room essential", badge: "MUST HAVE", color: "sand", symbol: "⚡", link: "https://amzn.to/45zhryK" },
+    { title: "Power Strip with USB & Extension Cord", category: "Dorm & Apartment", categories: ["Dorm & Apartment", "Tech & Gadgets", "Home"], price: "Room essential", badge: "MUST HAVE", color: "sand", symbol: "⚡", link: "https://amzn.to/45zhryK" },
 
     { title: "Kitsch Satin Heatless Curling Set", category: "Beauty & Wellness", price: "Overnight favorite", badge: "VIRAL BEAUTY", color: "rose", symbol: "≈", link: "https://amzn.to/4zv0naP" },
     { title: "LATME Ice Roller for Face and Eyes", category: "Beauty & Wellness", price: "Morning refresh", badge: "SELF-CARE", color: "blue", symbol: "◌", link: "https://amzn.to/45En4M1" },
@@ -46,10 +46,10 @@ window.siteContent = {
     { title: "Rocketbook Core Reusable Smart Notebook", category: "Tech & Gadgets", price: "Study essential", badge: "EDITOR PICK", color: "cream", symbol: "□", link: "https://amzn.to/4gr7Zm4" },
     { title: "Govee RGBIC LED Strip Lights", category: "Tech & Gadgets", price: "Room upgrade", badge: "VIRAL TECH", color: "olive", symbol: "✦", link: "https://amzn.to/4ikwYtG" },
 
-    { title: "Fullstar Pro Original Vegetable Chopper & Spiralizer", category: "Kitchen", price: "Meal-prep helper", badge: "VIRAL KITCHEN", color: "sage", symbol: "▦", link: "https://amzn.to/4c3BJnz" },
+    { title: "Fullstar Pro Original Vegetable Chopper & Spiralizer", category: "Kitchen", categories: ["Kitchen", "Home", "Lifestyle"], price: "Meal-prep helper", badge: "VIRAL KITCHEN", color: "sage", symbol: "▦", link: "https://amzn.to/4c3BJnz" },
     { title: "DASH Rapid Egg Cooker", category: "Kitchen", price: "Breakfast shortcut", badge: "MOST LOVED", color: "blue", symbol: "◌", link: "https://amzn.to/4cUizkn" },
     { title: "KitchenAid All-Purpose Kitchen Shears with Protective Sheath", category: "Kitchen", price: "Everyday essential", badge: "TOP RATED", color: "charcoal", symbol: "✂", link: "https://amzn.to/4gJpEXe" },
-    { title: "Zulay Kitchen Powerful Handheld Milk Frother", category: "Kitchen", price: "Coffee-bar upgrade", badge: "COFFEE FAVORITE", color: "cream", symbol: "≈", link: "https://amzn.to/3S5tReG" },
+    { title: "Zulay Kitchen Powerful Handheld Milk Frother", category: "Kitchen", categories: ["Kitchen", "Lifestyle", "Home"], price: "Coffee-bar upgrade", badge: "COFFEE FAVORITE", color: "cream", symbol: "≈", link: "https://amzn.to/3S5tReG" },
     { title: "Alpha Grillers Instant-Read Digital Meat Thermometer", category: "Kitchen", price: "Cooking confidence", badge: "KITCHEN PICK", color: "terracotta", symbol: "↗", link: "https://amzn.to/3U7ipQo" }
   ],
   collections: [
