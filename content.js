@@ -6,7 +6,8 @@ window.siteContent = {
     { name: "Seasonal", icon: "☼", color: "gold", description: "Right-now inspiration" },
     { name: "Dorm & Apartment", icon: "□", color: "blue", description: "Small-space wins" },
     { name: "Beauty & Wellness", icon: "◌", color: "rose", description: "Feel-good essentials" },
-    { name: "Tech & Gadgets", icon: "⌁", color: "charcoal", description: "Useful, not gimmicky" }
+    { name: "Tech & Gadgets", icon: "⌁", color: "charcoal", description: "Useful, not gimmicky" },
+    { name: "Kitchen", icon: "♨", color: "gold", description: "Prep, cook, and sip smarter" }
   ],
   products: [
     { title: "Candle Warmer Lamp with Timer and Dimmer", category: "Home", price: "Cozy home pick", badge: "TRENDING", color: "sand", symbol: "☼", link: "https://amzn.to/4g9LLpO" },
@@ -43,7 +44,13 @@ window.siteContent = {
     { title: "JBL Go 4 Portable Bluetooth Speaker", category: "Tech & Gadgets", price: "Portable favorite", badge: "TOP RATED", color: "blue", symbol: "♪", link: "https://amzn.to/3SOtc1n" },
     { title: "Lamicall Gooseneck Phone Holder", category: "Tech & Gadgets", price: "Hands-free helper", badge: "USEFUL FIND", color: "sage", symbol: "⌁", link: "https://amzn.to/45HSscz" },
     { title: "Rocketbook Core Reusable Smart Notebook", category: "Tech & Gadgets", price: "Study essential", badge: "EDITOR PICK", color: "cream", symbol: "□", link: "https://amzn.to/4gr7Zm4" },
-    { title: "Govee RGBIC LED Strip Lights", category: "Tech & Gadgets", price: "Room upgrade", badge: "VIRAL TECH", color: "olive", symbol: "✦", link: "https://amzn.to/4ikwYtG" }
+    { title: "Govee RGBIC LED Strip Lights", category: "Tech & Gadgets", price: "Room upgrade", badge: "VIRAL TECH", color: "olive", symbol: "✦", link: "https://amzn.to/4ikwYtG" },
+
+    { title: "Fullstar Pro Original Vegetable Chopper & Spiralizer", category: "Kitchen", price: "Meal-prep helper", badge: "VIRAL KITCHEN", color: "sage", symbol: "▦", link: "https://amzn.to/4c3BJnz" },
+    { title: "DASH Rapid Egg Cooker", category: "Kitchen", price: "Breakfast shortcut", badge: "MOST LOVED", color: "blue", symbol: "◌", link: "https://amzn.to/4cUizkn" },
+    { title: "KitchenAid All-Purpose Kitchen Shears with Protective Sheath", category: "Kitchen", price: "Everyday essential", badge: "TOP RATED", color: "charcoal", symbol: "✂", link: "https://amzn.to/4gJpEXe" },
+    { title: "Zulay Kitchen Powerful Handheld Milk Frother", category: "Kitchen", price: "Coffee-bar upgrade", badge: "COFFEE FAVORITE", color: "cream", symbol: "≈", link: "https://amzn.to/3S5tReG" },
+    { title: "Alpha Grillers Instant-Read Digital Meat Thermometer", category: "Kitchen", price: "Cooking confidence", badge: "KITCHEN PICK", color: "terracotta", symbol: "↗", link: "https://amzn.to/3U7ipQo" }
   ],
   collections: [
     { title: "The Cozy Apartment List", subtitle: "Warm up your space without a full makeover", number: "01", color: "warm", slug: "cozy-apartment" },
