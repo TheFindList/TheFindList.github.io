@@ -63,3 +63,45 @@ window.siteContent = {
     { title: "What we're saving this week: five finds under $40", tag: "THE WEEKLY FIVE", read: "3 min read", color: "gold" }
   ]
 };
+
+const productImages = [
+  "https://wisehomeproducts.com/cdn/shop/files/6_750x.jpg?v=1705769242",
+  "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/173/17399/17399223.jpeg",
+  "https://i.ebayimg.com/images/g/BucAAeSwdvRpZo5c/s-l1200.webp",
+  "https://static06.galaxus.com/productimages/7/9/2/0/1/2/9/6/5/5/0/6/1/9/2/6/7/4/4/92c3b150-8442-40b1-9f9c-37a6a9e5c09f.jpg_sea.jpeg",
+  "https://www.oldbonesco.com/cdn/shop/files/0023799_68015_B.jpg?v=1752225209&width=1920",
+  "https://soooq.com/cdn/shop/files/Web_PNG_Square-TheQuencherH2.OFlowState_Tumblerwithhandle20OZ-Indigo-Front_02cacf09-1dfd-43fd-8f6d-c470dc1c65d5.png?v=1737471012",
+  "https://bakabukim.com/cdn/shop/files/S102a98232b9a4d3c9f417c2f81f971c5Z.webp?v=1743964050&width=1946",
+  "https://www.instacart.com/image-server/1200x1200/www.instacart.com/assets/domains/product-image/file/large_33157c89-58cc-45ee-a10c-edc982e874b2.jpeg",
+  "https://goodbuygear.com/cdn/shop/files/Shop-All-Default-Restore_ccc3b3f7-642d-48dd-af8a-cb8cfd5f5505_1_800x.jpg?v=1755547431",
+  "https://cleverfoxplanner.com/cdn/shop/products/Main-Pearl_56ef05b9-1b90-4cf1-b448-9e6a02d1e60d_1400x.jpg?v=1698391744",
+  "https://m.media-amazon.com/images/I/81XHB3Da%2BrL._AC_SL1500_.jpg",
+  "https://i5.walmartimages.com/asr/a87e0d17-2778-4a4d-bfe1-b47790611436.ceb22a0df88cb7e1c8ab17c3118c8bc5.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+  "https://yankeecandle.imgix.net/b7433ad0-51cf-36da-9184-c3100cd69ce5/b7433ad0-51cf-36da-9184-c3100cd69ce5.jpg?auto=format%2Ccompress&h=2000&sort=1&w=2000",
+  "https://assets.wfcdn.com/im/86169086/resize-h400-w400%5Ecompr-r85/3832/383211283/6FT%2BArtificial%2BFall%2BGarland%2C%2BFarmhouse%2BAutumn%2BEucalyptus%2BGarland%2BThanksgiving%2BDecor%2BFor%2BHome%2BFireplace%2BWedding%2BParty%2BArch%2BBackdrop%2BDoorways%2BTable%2BRunner%2BIndoor.jpg",
+  "https://i5.walmartimages.com/asr/6eaf4e27-1f1a-41b1-9ab0-f031fa951c91.cabef7cb222b0f11cd2019e4a4ba48e6.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+  "https://m.media-amazon.com/images/I/61RAgsVBn1L.jpg",
+  "https://m.media-amazon.com/images/I/81Ugw8CYj4L.jpg",
+  "https://i5.walmartimages.com/seo/Lifewit-80L-Large-Tall-Laundry-Hamper-Collapsible-Laundry-Basket-Handles-Foldable-Clothes-Hampers-Laundry-Portable-Dirty-Clothes-Hamper-Dorm-College_c0f30cf8-710c-417b-8d10-b782219269fe.629b849134d8acc1e7ad98aec156508b.jpeg",
+  "https://m.media-amazon.com/images/I/61OyJNbOHtL._AC_SL1500_.jpg",
+  "https://i5.walmartimages.com/asr/4fe654e6-9900-49be-8a26-fe2e12b52525.7a7ebfba08f30282263b9a9e8aa82dea.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
+  "https://www.becharmedgifts.com/cdn/shop/files/Kitsch_Satin_Heatless_Curling_Set_Sunset_Tie_Dye_Be_Charmed.jpg?v=1770154855",
+  "https://m.media-amazon.com/images/I/311lx-q6jxL._SL500_.jpg",
+  "https://digital.loblaws.ca/PCX/21656901_EA/en/1/7537130050_enfr_front_centre_marketing_1_GS1_Ecommerce_800.png",
+  "https://images.beautybay.com/eoaaqxyywn6o/SOJA0018F_1.jpg_s3.lmb_i7mr8k/6e89f38f02d70d3f2da4cc6b56e78628/SOJA0018F_1.jpg",
+  "https://media.glamourmagazine.co.uk/photos/6508666cfb876f3ae1706f7e/3%3A4/w_748%2Cc_limit/AMAZON%2520HIGHLIGHTERS%2520180923%2520%2520%2520180923%2520%2520%252061KYdU6aLqL._AC_SX679_.jpg",
+  "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/3278/PMP20000428075/full_image-1.jpeg",
+  "https://electroniquehifi.ca/cdn/shop/files/804952_1.jpg?v=1738968212",
+  "https://i5.walmartimages.com/asr/fd802be9-f0fb-4df6-a935-6df4c6d75059.ec5b29e50c9354c1658a5d3c7f2a689b.jpeg?odnBg=FFFFFF&odnHeight=612&odnWidth=612",
+  "https://m.media-amazon.com/images/I/81YJPnSHSCL._AC_SL1500_.jpg",
+  "https://m.media-amazon.com/images/I/71QbUfYWa-L._AC_SL1500_.jpg",
+  "https://m.media-amazon.com/images/I/81CWnvUBrrL._UF894%2C1000_QL80_.jpg",
+  "https://cdn-tp6.mozu.com/24645-37138/cms/37138/files/5570a05e-1c79-4ed1-898d-f4f250e44edc",
+  "https://medaidco.com/cdn/shop/files/61jQ2WhTA1L._AC_SL1500.jpg?v=1727362836",
+  "https://cdn.shopify.com/s/files/1/0091/0593/2324/files/Milk_Frother_Without_Stand_-_Titanium_Silver.jpg?v=1774890464",
+  "https://i5.walmartimages.com/seo/Alpha-Grillers-Meat-Thermometer-Digital-Instant-Read-Food-Thermometer-Cooking-Grilling-Air-Fryer-Griddle-Probe-Kitchen-Gadgets-Essentials-BBQ-Accesso_e6ca56b3-337f-49b5-bb6a-f5b4f910d2a1.9fec8ebdcb1b79155d7016a45e986fc9.jpeg"
+];
+
+window.siteContent.products.forEach((product, index) => {
+  product.image = productImages[index];
+});
