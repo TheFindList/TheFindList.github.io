@@ -4,6 +4,18 @@ const productGrid = document.querySelector('#productGrid');
 const collectionGrid = document.querySelector('#collectionGrid');
 const articleGrid = document.querySelector('#articleGrid');
 const slugify = value => value.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const millisecondsPerWeek = 7 * 24 * 60 * 60 * 1000;
+
+function weeklyRotation(items, filter) {
+  if (items.length < 2) return items;
+  const now = new Date();
+  const mondayOffset = (now.getUTCDay() + 6) % 7;
+  const monday = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - mondayOffset);
+  const weekNumber = Math.floor(monday / millisecondsPerWeek);
+  const weeklyStep = filter === 'All' ? 5 : 1;
+  const offset = (weekNumber * weeklyStep) % items.length;
+  return [...items.slice(offset), ...items.slice(0, offset)];
+}
 
 categoryGrid.innerHTML = content.categories.map(item => `
   <a class="category-card ${item.color}" href="#trending" data-category="${item.name}">
@@ -17,7 +29,8 @@ function renderProducts(filter = 'All', expanded = false) {
         const productCategories = product.categories || [product.category];
         return productCategories.includes(filter);
       });
-  const visible = expanded ? filtered : filtered.slice(0, 4);
+  const rotated = weeklyRotation(filtered, filter);
+  const visible = expanded ? rotated : rotated.slice(0, 4);
   productGrid.innerHTML = visible.map((item, index) => `
     <article class="product-card">
       <a class="product-image ${item.color}" href="${item.link}" target="_blank" rel="sponsored nofollow noopener" aria-label="View ${item.title} on Amazon">
@@ -28,7 +41,7 @@ function renderProducts(filter = 'All', expanded = false) {
       <p class="product-category">${item.category}</p><h3>${item.title}</h3>
       <div class="product-meta"><span>${item.price}</span><a href="blog/${slugify(item.title)}.html">Read guide →</a></div>
     </article>`).join('');
-  document.querySelector('#loadMore').hidden = visible.length === filtered.length;
+  document.querySelector('#loadMore').hidden = visible.length === rotated.length;
 }
 renderProducts();
 
