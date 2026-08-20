@@ -11,7 +11,12 @@ categoryGrid.innerHTML = content.categories.map(item => `
   </a>`).join('');
 
 function renderProducts(filter = 'All', expanded = false) {
-  const filtered = filter === 'All' ? content.products : content.products.filter(p => p.category === filter);
+  const filtered = filter === 'All'
+    ? content.products
+    : content.products.filter(product => {
+        const productCategories = product.categories || [product.category];
+        return productCategories.includes(filter);
+      });
   const visible = expanded ? filtered : filtered.slice(0, 4);
   productGrid.innerHTML = visible.map((item, index) => `
     <article class="product-card">
@@ -33,9 +38,24 @@ articleGrid.innerHTML = content.articles.map(item => `
 
 let currentFilter = 'All';
 let expanded = false;
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+function selectCategory(category, showAll = false) {
   document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
-  button.classList.add('active'); currentFilter = button.dataset.filter; expanded = false; renderProducts(currentFilter);
+  const matchingFilter = Array.from(document.querySelectorAll('[data-filter]'))
+    .find(button => button.dataset.filter === category);
+  if (matchingFilter) matchingFilter.classList.add('active');
+  currentFilter = category;
+  expanded = showAll;
+  renderProducts(currentFilter, expanded);
+}
+
+document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+  selectCategory(button.dataset.filter);
+}));
+
+document.querySelectorAll('[data-category]').forEach(card => card.addEventListener('click', event => {
+  event.preventDefault();
+  selectCategory(card.dataset.category, true);
+  document.querySelector('#trending').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }));
 document.querySelector('#loadMore').addEventListener('click', () => { expanded = true; renderProducts(currentFilter, true); });
 document.addEventListener('click', event => {
