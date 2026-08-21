@@ -15,42 +15,39 @@ window.siteContent = {
     { title: "YIHONG Woven Storage Basket Set", category: "Home", price: "Organization pick", badge: "SMART STORAGE", color: "oat", symbol: "▦", link: "https://amzn.to/46bpz8J" },
     { title: "Govee RGBIC Smart Table Lamp", category: "Home", price: "Ambient upgrade", badge: "VIRAL", color: "blue", symbol: "✦", link: "https://amzn.to/4xTd79D" },
     { title: "Mkono Ceramic Vase Set", category: "Home", price: "Editor pick", badge: "HOME DETAIL", color: "terracotta", symbol: "◌", link: "https://amzn.to/3SI6bgA" },
-
     { title: "Stanley Quencher H2.0 FlowState Tumbler", category: "Lifestyle", price: "Daily essential", badge: "MOST LOVED", color: "rose", symbol: "↗", link: "https://amzn.to/4wDQVze" },
     { title: "Owala FreeSip Insulated Water Bottle", category: "Lifestyle", price: "On-the-go pick", badge: "POPULAR", color: "sage", symbol: "⌁", link: "https://amzn.to/4quwmDR" },
     { title: "BAGSMART Travel Toiletry Bag", category: "Lifestyle", price: "Travel favorite", badge: "SMART FIND", color: "sand", symbol: "▦", link: "https://amzn.to/4zuRHRC" },
     { title: "Hatch Restore Sound Machine & Sunrise Alarm", category: "Lifestyle", categories: ["Lifestyle", "Beauty & Wellness", "Tech & Gadgets"], price: "Morning upgrade", badge: "WELLNESS", color: "oat", symbol: "☼", link: "https://amzn.to/4qsp3fP" },
     { title: "Clever Fox Premium Weekly Planner", category: "Lifestyle", price: "Get organized", badge: "EDITOR PICK", color: "olive", symbol: "✓", link: "https://amzn.to/4qx1JxQ" },
-
     { title: "MIULEE Burnt-Orange Corduroy Pillow Covers", category: "Seasonal", categories: ["Seasonal", "Home", "Dorm & Apartment"], price: "Fall refresh", badge: "FALL FAVORITE", color: "terracotta", symbol: "⌂", link: "https://amzn.to/3UKOwFx" },
     { title: "Bedsure Burnt-Orange Knit Throw Blanket", category: "Seasonal", categories: ["Seasonal", "Home", "Dorm & Apartment"], price: "Cozy seasonal pick", badge: "MOST SAVED", color: "sand", symbol: "≈", link: "https://amzn.to/3Slsc4v" },
     { title: "Yankee Candle Autumn Wreath Large Jar Candle", category: "Seasonal", price: "Classic fall scent", badge: "SEASONAL", color: "gold", symbol: "☼", link: "https://amzn.to/4cRfnWF" },
     { title: "Winemana Eucalyptus & Fall Leaf Garland", category: "Seasonal", price: "Easy decor update", badge: "FALL DECOR", color: "olive", symbol: "⌁", link: "https://amzn.to/4xdPlFq" },
     { title: "FEXIA Boho Fall Table Runner", category: "Seasonal", price: "Tabletop favorite", badge: "HOSTING PICK", color: "oat", symbol: "≈", link: "https://amzn.to/4gIU6Rm" },
-
     { title: "Pipishell Three-Tier Rolling Utility Cart", category: "Dorm & Apartment", price: "Small-space hero", badge: "DORM ESSENTIAL", color: "sage", symbol: "▦", link: "https://amzn.to/4xMdBhG" },
     { title: "Dormify Bedside Caddy", category: "Dorm & Apartment", price: "Bedside organizer", badge: "SPACE SAVER", color: "blue", symbol: "□", link: "https://amzn.to/4ielSq8" },
     { title: "Lifewit Large Laundry Hamper", category: "Dorm & Apartment", price: "Everyday essential", badge: "PRACTICAL PICK", color: "cream", symbol: "⌂", link: "https://amzn.to/46bKpVs" },
     { title: "Amazon Basics Velvet Nonslip Hangers", category: "Dorm & Apartment", price: "Closet upgrade", badge: "BEST VALUE", color: "rose", symbol: "⌁", link: "https://amzn.to/4qvhaqj" },
     { title: "Power Strip with USB & Extension Cord", category: "Dorm & Apartment", categories: ["Dorm & Apartment", "Tech & Gadgets", "Home"], price: "Room essential", badge: "MUST HAVE", color: "sand", symbol: "⚡", link: "https://amzn.to/45zhryK" },
-
     { title: "Kitsch Satin Heatless Curling Set", category: "Beauty & Wellness", price: "Overnight favorite", badge: "VIRAL BEAUTY", color: "rose", symbol: "≈", link: "https://amzn.to/4zv0naP" },
     { title: "LATME Ice Roller for Face and Eyes", category: "Beauty & Wellness", price: "Morning refresh", badge: "SELF-CARE", color: "blue", symbol: "◌", link: "https://amzn.to/45En4M1" },
     { title: "Tree Hut Tropic Glow Shea Sugar Scrub", category: "Beauty & Wellness", price: "Glow favorite", badge: "MOST LOVED", color: "gold", symbol: "✦", link: "https://amzn.to/4gjW6hE" },
     { title: "Sol de Janeiro Brazilian Bum Bum Cream", category: "Beauty & Wellness", price: "Cult favorite", badge: "TRENDING", color: "terracotta", symbol: "☼", link: "https://amzn.to/4ikiXMD" },
     { title: "e.l.f. Halo Glow Liquid Filter", category: "Beauty & Wellness", price: "Beauty editor pick", badge: "VIRAL", color: "sand", symbol: "✦", link: "https://amzn.to/3SFIV2K" },
-
     { title: "Anker 3-in-1 Cube with MagSafe", category: "Tech & Gadgets", price: "Charging upgrade", badge: "SMART TECH", color: "oat", symbol: "⚡", link: "https://amzn.to/4cTY1Zh" },
     { title: "JBL Go 4 Portable Bluetooth Speaker", category: "Tech & Gadgets", price: "Portable favorite", badge: "TOP RATED", color: "blue", symbol: "♪", link: "https://amzn.to/3SOtc1n" },
     { title: "Lamicall Gooseneck Phone Holder", category: "Tech & Gadgets", price: "Hands-free helper", badge: "USEFUL FIND", color: "sage", symbol: "⌁", link: "https://amzn.to/45HSscz" },
     { title: "Rocketbook Core Reusable Smart Notebook", category: "Tech & Gadgets", price: "Study essential", badge: "EDITOR PICK", color: "cream", symbol: "□", link: "https://amzn.to/4gr7Zm4" },
     { title: "Govee RGBIC LED Strip Lights", category: "Tech & Gadgets", price: "Room upgrade", badge: "VIRAL TECH", color: "olive", symbol: "✦", link: "https://amzn.to/4ikwYtG" },
-
     { title: "Fullstar Pro Original Vegetable Chopper & Spiralizer", category: "Kitchen", categories: ["Kitchen", "Home", "Lifestyle"], price: "Meal-prep helper", badge: "VIRAL KITCHEN", color: "sage", symbol: "▦", link: "https://amzn.to/4c3BJnz" },
     { title: "DASH Rapid Egg Cooker", category: "Kitchen", price: "Breakfast shortcut", badge: "MOST LOVED", color: "blue", symbol: "◌", link: "https://amzn.to/4cUizkn" },
     { title: "KitchenAid All-Purpose Kitchen Shears with Protective Sheath", category: "Kitchen", price: "Everyday essential", badge: "TOP RATED", color: "charcoal", symbol: "✂", link: "https://amzn.to/4gJpEXe" },
     { title: "Zulay Kitchen Powerful Handheld Milk Frother", category: "Kitchen", categories: ["Kitchen", "Lifestyle", "Home"], price: "Coffee-bar upgrade", badge: "COFFEE FAVORITE", color: "cream", symbol: "≈", link: "https://amzn.to/3S5tReG" },
-    { title: "Alpha Grillers Instant-Read Digital Meat Thermometer", category: "Kitchen", price: "Cooking confidence", badge: "KITCHEN PICK", color: "terracotta", symbol: "↗", link: "https://amzn.to/3U7ipQo" }
+    { title: "Alpha Grillers Instant-Read Digital Meat Thermometer", category: "Kitchen", price: "Cooking confidence", badge: "KITCHEN PICK", color: "terracotta", symbol: "↗", link: "https://amzn.to/3U7ipQo" },
+    { title: "Easy-Pour Glass Oil Dispenser", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Mess-free cooking helper", badge: "KITCHEN FIND", color: "gold", symbol: "↗", link: "https://amzn.to/4wGxm9u" },
+    { title: "Magnetic Refrigerator Spice Rack", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Counter-space saver", badge: "SMART STORAGE", color: "charcoal", symbol: "▦", link: "https://amzn.to/3SIjy0e" },
+    { title: "Space-Saving Kitchen Strainer", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Easy prep essential", badge: "USEFUL FIND", color: "sage", symbol: "◌", link: "https://amzn.to/4hNyODk" }
   ],
   collections: [
     { title: "The Cozy Apartment List", subtitle: "Warm up your space without a full makeover", number: "01", color: "warm", slug: "cozy-apartment" },
@@ -99,7 +96,10 @@ const productImages = [
   "https://cdn-tp6.mozu.com/24645-37138/cms/37138/files/5570a05e-1c79-4ed1-898d-f4f250e44edc",
   "https://medaidco.com/cdn/shop/files/61jQ2WhTA1L._AC_SL1500.jpg?v=1727362836",
   "https://cdn.shopify.com/s/files/1/0091/0593/2324/files/Milk_Frother_Without_Stand_-_Titanium_Silver.jpg?v=1774890464",
-  "https://i5.walmartimages.com/seo/Alpha-Grillers-Meat-Thermometer-Digital-Instant-Read-Food-Thermometer-Cooking-Grilling-Air-Fryer-Griddle-Probe-Kitchen-Gadgets-Essentials-BBQ-Accesso_e6ca56b3-337f-49b5-bb6a-f5b4f910d2a1.9fec8ebdcb1b79155d7016a45e986fc9.jpeg"
+  "https://i5.walmartimages.com/seo/Alpha-Grillers-Meat-Thermometer-Digital-Instant-Read-Food-Thermometer-Cooking-Grilling-Air-Fryer-Griddle-Probe-Kitchen-Gadgets-Essentials-BBQ-Accesso_e6ca56b3-337f-49b5-bb6a-f5b4f910d2a1.9fec8ebdcb1b79155d7016a45e986fc9.jpeg",
+  "https://www.shukanmall.com/product-img/Glass-Oil-Bottle-With-Ergonomi1-1678788678.jpg",
+  "https://i.ebayimg.com/images/g/wX8AAOSwEqxnCUve/s-l1200.png",
+  "https://slimages.macysassets.com/is/image/MCY/products/1/optimized/22801891_fpx.tif?fit=fit%2C1&hei=855&op_sharpen=1&wid=700"
 ];
 
 window.siteContent.products.forEach((product, index) => {
