@@ -1,61 +1,28 @@
 const content = window.siteContent;
 
 content.products.push(
-  {
-    title: "Ninja Crispi 4-in-1 Portable Glass Air Fryer",
-    category: "Kitchen",
-    categories: ["Kitchen", "Home", "Lifestyle"],
-    price: "Viral glass air fryer",
-    badge: "TRENDING",
-    color: "cream",
-    symbol: "✦",
-    link: "https://amzn.to/4zyU6uK",
-    image: "https://www.appliancesonline.com.au/ak/4/f/b/f/4fbf79df5df203b30c7d1bfe6d5cc9e505e9209b_FN101ST_Lifestyle_IMage__7_-high.jpeg?width=814"
-  },
-  {
-    title: "BISSELL Little Green Portable Carpet Cleaner",
-    category: "Home",
-    categories: ["Home", "Lifestyle"],
-    price: "Before-and-after cleaning favorite",
-    badge: "MOST LOVED",
-    color: "sage",
-    symbol: "⌂",
-    link: "https://amzn.to/4ilVpqD",
-    image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/bf134973152c492784b1e45f7bfeb1e6~tplv-fhlh96nyum-crop-webp%3A1500%3A1500.webp?dr=12190&from=2378011839&idc=useast5&ps=933b5bde&shcp=e1be8f53&shp=8dbd94bf&t=555f072d"
-  },
-  {
-    title: "DREO Tower Fan",
-    category: "Tech & Gadgets",
-    categories: ["Tech & Gadgets", "Home"],
-    price: "Quiet room-cooling upgrade",
-    badge: "SMART HOME",
-    color: "charcoal",
-    symbol: "⌁",
-    link: "https://amzn.to/45HeYlS",
-    image: "https://i5.walmartimages.com/seo/Dreo-Tower-Fans-Home-2024-New-90-Oscillating-Standing-Fans-Remote-24-ft-s-Velocity-Quiet-Bedroom-Fan-4-Speeds-4Modes-8H-Timer-Bladeless-Floor-Fan-Bla_5f44859b-8e3c-4a95-b70c-017fc6ce0842.d2571d32588bd41d44524ac97e9684e1.jpeg"
-  },
-  {
-    title: "Umite Chef 33-Piece Silicone Kitchen Utensil Set",
-    category: "Kitchen",
-    categories: ["Kitchen", "Home"],
-    price: "Complete countertop utensil set",
-    badge: "POPULAR",
-    color: "oat",
-    symbol: "▦",
-    link: "https://amzn.to/3Ud2xvz",
-    image: "https://m.media-amazon.com/images/I/41yA-nW0utL._SL500_.jpg"
-  },
-  {
-    title: "Flameless Flickering Candle Set",
-    category: "Seasonal",
-    categories: ["Seasonal", "Home"],
-    price: "Cozy fall glow without the flame",
-    badge: "FALL FAVORITE",
-    color: "terracotta",
-    symbol: "☼",
-    link: "https://amzn.to/4xfjFiL",
-    image: "https://m.media-amazon.com/images/I/71A1n2zgE9L.jpg"
-  }
+  { title: "Ninja Crispi 4-in-1 Portable Glass Air Fryer", category: "Kitchen", categories: ["Kitchen", "Home", "Lifestyle"], price: "Viral glass air fryer", badge: "TRENDING", color: "cream", symbol: "✦", link: "https://amzn.to/4zyU6uK", image: "https://www.appliancesonline.com.au/ak/4/f/b/f/4fbf79df5df203b30c7d1bfe6d5cc9e505e9209b_FN101ST_Lifestyle_IMage__7_-high.jpeg?width=814" },
+  { title: "BISSELL Little Green Portable Carpet Cleaner", category: "Home", categories: ["Home", "Lifestyle"], price: "Before-and-after cleaning favorite", badge: "MOST LOVED", color: "sage", symbol: "⌂", link: "https://amzn.to/4ilVpqD", image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/bf134973152c492784b1e45f7bfeb1e6~tplv-fhlh96nyum-crop-webp%3A1500%3A1500.webp?dr=12190&from=2378011839&idc=useast5&ps=933b5bde&shcp=e1be8f53&shp=8dbd94bf&t=555f072d" },
+  { title: "DREO Tower Fan", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home"], price: "Quiet room-cooling upgrade", badge: "SMART HOME", color: "charcoal", symbol: "⌁", link: "https://amzn.to/45HeYlS", image: "https://i5.walmartimages.com/seo/Dreo-Tower-Fans-Home-2024-New-90-Oscillating-Standing-Fans-Remote-24-ft-s-Velocity-Quiet-Bedroom-Fan-4-Speeds-4Modes-8H-Timer-Bladeless-Floor-Fan-Bla_5f44859b-8e3c-4a95-b70c-017fc6ce0842.d2571d32588bd41d44524ac97e9684e1.jpeg" },
+  { title: "Umite Chef 33-Piece Silicone Kitchen Utensil Set", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Complete countertop utensil set", badge: "POPULAR", color: "oat", symbol: "▦", link: "https://amzn.to/3Ud2xvz", image: "https://m.media-amazon.com/images/I/41yA-nW0utL._SL500_.jpg" },
+  { title: "Flameless Flickering Candle Set", category: "Seasonal", categories: ["Seasonal", "Home", "Decorations"], price: "Cozy fall glow without the flame", badge: "FALL FAVORITE", color: "terracotta", symbol: "☼", link: "https://amzn.to/4xfjFiL", image: "https://m.media-amazon.com/images/I/71A1n2zgE9L.jpg" }
+);
+
+content.categories.push({ name: "Decorations", icon: "✦", color: "terracotta", description: "Fall, Halloween & festive accents" });
+content.products.push(
+  { title: "Artificial Fall Maple Leaf Garland", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Mantel & staircase favorite", badge: "FALL DECOR", color: "terracotta", symbol: "⌁", link: "https://amzn.to/4qyYDJy", image: "https://mobileimages.lowes.com/productimages/0ea2503b-3b7c-4937-8d94-33c2665606df/83097563.jpeg?size=pdhism" },
+  { title: "Mini Velvet Pumpkin Decoration Set", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Cozy tabletop accent", badge: "FALL FAVORITE", color: "gold", symbol: "◌", link: "https://amzn.to/4i7Klxx", image: "https://i.etsystatic.com/36215591/r/il/9479f2/7111228484/il_1080xN.7111228484_dbqc.jpg" },
+  { title: "46.5-inch Lighted Animated Floating Ghost", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Animated Halloween statement piece", badge: "HALLOWEEN", color: "cream", symbol: "✦", link: "https://amzn.to/4hPkyKk", image: "https://jubileegiftshop.com/cdn/shop/files/401126MBL_3.jpg?v=1689791322&width=1200" },
+  { title: "BRIGHTDECK Halloween Solar Pumpkin Pathway Lights", category: "Decorations", categories: ["Decorations", "Seasonal", "Home", "Tech & Gadgets"], price: "20-pack outdoor Halloween lights", badge: "OUTDOOR DECOR", color: "gold", symbol: "☼", link: "https://amzn.to/4cDmemx", image: "https://assets.wfcdn.com/im/42728976/resize-h800-w800%5Ecompr-r85/3744/374432802/Outdoor%2BHalloween%2BPumpkin%2BSolar%2BPathway%2BLights%284-pack%29%2BGarden%2BLed%2BLandscape%2BLighting.jpg" },
+  { title: "Artificial Fall Eucalyptus Stems", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Easy vase & centerpiece update", badge: "AUTUMN STEMS", color: "terracotta", symbol: "⌁", link: "https://amzn.to/3SK4Upg", image: "https://assets.wfcdn.com/im/87469292/resize-h400-w400%5Ecompr-r85/3900/390098756/Artificial%2BFarmhouse%2BFloral%2BArrangement%2C%2BFall%2BEucalyptus%2BFoliage%2BSprays%2BWith%2BLong%2BStems%2BFor%2BVase%2BFiller%2BTable%2BDecoration..jpg" },
+  { title: "Fall Tiered-Tray Decorative Sign Set", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Shelf & tiered-tray styling", badge: "COZY DETAIL", color: "olive", symbol: "▦", link: "https://amzn.to/4iohMMa", image: "https://i.etsystatic.com/20608763/r/il/dbaa37/4946804439/il_1080xN.4946804439_4aas.jpg" },
+  { title: "Pumpkin Candle Holder Decorations", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Warm fall tabletop glow", badge: "TABLETOP", color: "terracotta", symbol: "☼", link: "https://amzn.to/4gvq4PW", image: "https://www.myweddingfavors.com/cdn/shop/files/25362OR-2_1280x.jpg?v=1724273252" },
+  { title: "Halloween Pumpkin Window Clings", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Quick Halloween makeover", badge: "EASY DECOR", color: "gold", symbol: "✦", link: "https://amzn.to/4wEh0hz", image: "https://www.quotemywall.co.uk/cdn/shop/products/il_fullxfull.5119695354_p2y0.jpg?v=1694091431&width=1946" },
+  { title: "Pumpkin & Maple Leaf String Lights", category: "Decorations", categories: ["Decorations", "Seasonal", "Home", "Tech & Gadgets"], price: "Warm seasonal lighting", badge: "FALL GLOW", color: "terracotta", symbol: "☼", link: "https://amzn.to/45DATdJ", image: "https://s8.badu.bg/photos/543250/940x940_63bea4bf2bfe4.jpg" },
+  { title: "Artificial Sunflower Fall Floral Arrangement", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Autumn centerpiece", badge: "FALL FLORAL", color: "gold", symbol: "✦", link: "https://amzn.to/4cTFpbO", image: "https://www.craftoutlet.com/cdn/shop/files/sunflower-dahlia-bush-rust-orange-57192rt.jpg?v=1752181928" },
+  { title: "Light-Up Ghost Halloween Decorations", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Cute spooky-season accent", badge: "HALLOWEEN", color: "cream", symbol: "◌", link: "https://amzn.to/4wHFoig", image: "https://i5.walmartimages.com/seo/Cixusio-Halloween-Decorations-Halloween-Ghost-Light-Spooky-Ghost-Decoration-Light-up-Ghost-Ornament-Hanging-Light-Table-Mantel-Wall-Decoration-Hallow_337a01cc-fdec-44a1-b9fe-b48865a4e2e0.cdc93202c6efb83dc11126472148008f.jpeg" },
+  { title: "Fall Decorative Lantern", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Porch, mantel & tabletop accent", badge: "COZY GLOW", color: "oat", symbol: "☼", link: "https://amzn.to/4qyZpGs", image: "https://f.twojstyl.pl/twojstyl_prod_2025_09/article_content_vertical-1756898929ddcfe0-downloajesienne-dekoracje-okna16.jpeg" },
+  { title: "Jabberin' Jack Talking Animated Pumpkin", category: "Decorations", categories: ["Decorations", "Seasonal", "Home", "Tech & Gadgets"], price: "8-inch screen, projector & speaker", badge: "TALKING PUMPKIN", color: "terracotta", symbol: "🎃", link: "https://amzn.to/46gkMmr", image: "https://cdn11.bigcommerce.com/s-lxyj9b/images/stencil/1280x1280/products/17408/41065/Jabberin_Jack%C2%A0Orange_Animated_Pumpkin__2__27074.1694436495.jpg?c=2" }
 );
 
 const categoryGrid = document.querySelector('#categoryGrid');
@@ -64,140 +31,22 @@ const collectionGrid = document.querySelector('#collectionGrid');
 const articleGrid = document.querySelector('#articleGrid');
 const slugify = value => value.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const millisecondsPerWeek = 7 * 24 * 60 * 60 * 1000;
-
-function weeklyRotation(items, filter) {
-  if (items.length < 2) return items;
-  const now = new Date();
-  const mondayOffset = (now.getUTCDay() + 6) % 7;
-  const monday = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - mondayOffset);
-  const weekNumber = Math.floor(monday / millisecondsPerWeek);
-  const weeklyStep = filter === 'All' ? 5 : 1;
-  const offset = (weekNumber * weeklyStep) % items.length;
-  return [...items.slice(offset), ...items.slice(0, offset)];
-}
-
-function escapeXml(value = '') {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
-
-function wrapTitle(title, max = 24) {
-  const words = String(title).split(/\s+/);
-  const lines = [];
-  let line = '';
-  words.forEach(word => {
-    const next = line ? `${line} ${word}` : word;
-    if (next.length > max && line) {
-      lines.push(line);
-      line = word;
-    } else {
-      line = next;
-    }
-  });
-  if (line) lines.push(line);
-  return lines.slice(0, 4);
-}
-
-function productFallback(title, category) {
-  const lines = wrapTitle(title).map((line, index) =>
-    `<text x="50%" y="${250 + index * 44}" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#3f352d">${escapeXml(line)}</text>`
-  ).join('');
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
-    <rect width="800" height="800" fill="#f3eee6"/>
-    <circle cx="400" cy="165" r="78" fill="#ded2c2"/>
-    <text x="400" y="187" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#6f5c4b">✦</text>
-    ${lines}
-    <text x="400" y="475" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" letter-spacing="3" fill="#8b755f">${escapeXml((category || 'THE FIND LIST').toUpperCase())}</text>
-    <line x1="250" y1="520" x2="550" y2="520" stroke="#cabba8" stroke-width="2"/>
-    <text x="400" y="575" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#5b4a3d">THE FIND LIST</text>
-    <text x="400" y="615" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#8b755f">Product image unavailable</text>
-  </svg>`;
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-}
-
-function applyImageFallbacks() {
-  document.querySelectorAll('.product-photo').forEach(img => {
-    const fallback = () => {
-      if (img.dataset.fallbackApplied === 'true') return;
-      img.dataset.fallbackApplied = 'true';
-      img.src = productFallback(img.dataset.title || img.alt, img.dataset.category || 'The Find List');
-    };
-    img.addEventListener('error', fallback, { once: true });
-    if (img.complete && img.naturalWidth === 0) fallback();
-  });
-}
-
-categoryGrid.innerHTML = content.categories.map(item => `
-  <a class="category-card ${item.color}" href="#trending" data-category="${item.name}">
-    <span class="category-icon">${item.icon}</span><span><strong>${item.name}</strong><small>${item.description}</small></span><b>→</b>
-  </a>`).join('');
-
-function renderProducts(filter = 'All', expanded = false) {
-  const filtered = filter === 'All'
-    ? content.products
-    : content.products.filter(product => {
-        const productCategories = product.categories || [product.category];
-        return productCategories.includes(filter);
-      });
-  const rotated = weeklyRotation(filtered, filter);
-  const visible = expanded ? rotated : rotated.slice(0, 4);
-  productGrid.innerHTML = visible.map((item, index) => `
-    <article class="product-card">
-      <a class="product-image ${item.color}" href="${item.link}" target="_blank" rel="sponsored nofollow noopener" aria-label="View ${item.title} on Amazon">
-        <span class="product-badge">${item.badge}</span>
-        <img class="product-photo" src="${item.image}" alt="${item.title}" data-title="${item.title.replace(/"/g, '&quot;')}" data-category="${item.category}" loading="lazy" decoding="async" />
-        <button class="save-button" aria-label="Save ${item.title}" data-save="${index}">♡</button>
-      </a>
-      <p class="product-category">${item.category}</p><h3>${item.title}</h3>
-      <div class="product-meta"><span>${item.price}</span><a href="blog/${slugify(item.title)}.html">Read guide →</a></div>
-    </article>`).join('');
-  applyImageFallbacks();
-  document.querySelector('#loadMore').hidden = visible.length === rotated.length;
-}
+function weeklyRotation(items, filter) { if (items.length < 2) return items; const now = new Date(); const mondayOffset = (now.getUTCDay() + 6) % 7; const monday = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - mondayOffset); const weekNumber = Math.floor(monday / millisecondsPerWeek); const weeklyStep = filter === 'All' ? 5 : 1; const offset = (weekNumber * weeklyStep) % items.length; return [...items.slice(offset), ...items.slice(0, offset)]; }
+function escapeXml(value = '') { return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;'); }
+function wrapTitle(title, max = 24) { const words = String(title).split(/\s+/); const lines = []; let line = ''; words.forEach(word => { const next = line ? `${line} ${word}` : word; if (next.length > max && line) { lines.push(line); line = word; } else line = next; }); if (line) lines.push(line); return lines.slice(0, 4); }
+function productFallback(title, category) { const lines = wrapTitle(title).map((line, index) => `<text x="50%" y="${250 + index * 44}" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#3f352d">${escapeXml(line)}</text>`).join(''); const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800"><rect width="800" height="800" fill="#f3eee6"/><circle cx="400" cy="165" r="78" fill="#ded2c2"/><text x="400" y="187" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#6f5c4b">✦</text>${lines}<text x="400" y="475" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" letter-spacing="3" fill="#8b755f">${escapeXml((category || 'THE FIND LIST').toUpperCase())}</text><line x1="250" y1="520" x2="550" y2="520" stroke="#cabba8" stroke-width="2"/><text x="400" y="575" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#5b4a3d">THE FIND LIST</text><text x="400" y="615" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#8b755f">Product image unavailable</text></svg>`; return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`; }
+function applyImageFallbacks() { document.querySelectorAll('.product-photo').forEach(img => { const fallback = () => { if (img.dataset.fallbackApplied === 'true') return; img.dataset.fallbackApplied = 'true'; img.src = productFallback(img.dataset.title || img.alt, img.dataset.category || 'The Find List'); }; img.addEventListener('error', fallback, { once: true }); if (img.complete && img.naturalWidth === 0) fallback(); }); }
+categoryGrid.innerHTML = content.categories.map(item => `<a class="category-card ${item.color}" href="#trending" data-category="${item.name}"><span class="category-icon">${item.icon}</span><span><strong>${item.name}</strong><small>${item.description}</small></span><b>→</b></a>`).join('');
+function renderProducts(filter = 'All', expanded = false) { const filtered = filter === 'All' ? content.products : content.products.filter(product => { const productCategories = product.categories || [product.category]; return productCategories.includes(filter); }); const rotated = weeklyRotation(filtered, filter); const visible = expanded ? rotated : rotated.slice(0, 4); productGrid.innerHTML = visible.map((item, index) => `<article class="product-card"><a class="product-image ${item.color}" href="${item.link}" target="_blank" rel="sponsored nofollow noopener" aria-label="View ${item.title} on Amazon"><span class="product-badge">${item.badge}</span><img class="product-photo" src="${item.image}" alt="${item.title}" data-title="${item.title.replace(/"/g, '&quot;')}" data-category="${item.category}" loading="lazy" decoding="async" /><button class="save-button" aria-label="Save ${item.title}" data-save="${index}">♡</button></a><p class="product-category">${item.category}</p><h3>${item.title}</h3><div class="product-meta"><span>${item.price}</span><a href="blog/${slugify(item.title)}.html">Read guide →</a></div></article>`).join(''); applyImageFallbacks(); document.querySelector('#loadMore').hidden = visible.length === rotated.length; }
 renderProducts();
-
-collectionGrid.innerHTML = content.collections.map(item => `
-  <a class="collection-card ${item.color}" href="collections/${item.slug}.html"><span class="collection-number">${item.number}</span><div><p>THE FIND LIST</p><h3>${item.title}</h3><span>${item.subtitle}</span></div><b>Read the story →</b></a>`).join('');
-articleGrid.innerHTML = content.articles.map(item => `
-  <article class="article-card"><a class="article-image ${item.color}" href="#journal"><span>${item.tag}</span></a><p class="article-meta">${item.tag} · ${item.read}</p><h3><a href="#journal">${item.title}</a></h3><a class="text-link" href="#journal">Read story <span>→</span></a></article>`).join('');
-
-let currentFilter = 'All';
-let expanded = false;
-function selectCategory(category, showAll = false) {
-  document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
-  const matchingFilter = Array.from(document.querySelectorAll('[data-filter]'))
-    .find(button => button.dataset.filter === category);
-  if (matchingFilter) matchingFilter.classList.add('active');
-  currentFilter = category;
-  expanded = showAll;
-  renderProducts(currentFilter, expanded);
-}
-
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-  selectCategory(button.dataset.filter);
-}));
-
-document.querySelectorAll('[data-category]').forEach(card => card.addEventListener('click', event => {
-  event.preventDefault();
-  selectCategory(card.dataset.category, true);
-  document.querySelector('#trending').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}));
+collectionGrid.innerHTML = content.collections.map(item => `<a class="collection-card ${item.color}" href="collections/${item.slug}.html"><span class="collection-number">${item.number}</span><div><p>THE FIND LIST</p><h3>${item.title}</h3><span>${item.subtitle}</span></div><b>Read the story →</b></a>`).join('');
+articleGrid.innerHTML = content.articles.map(item => `<article class="article-card"><a class="article-image ${item.color}" href="#journal"><span>${item.tag}</span></a><p class="article-meta">${item.tag} · ${item.read}</p><h3><a href="#journal">${item.title}</a></h3><a class="text-link" href="#journal">Read story <span>→</span></a></article>`).join('');
+let currentFilter = 'All'; let expanded = false;
+function selectCategory(category, showAll = false) { document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active')); const matchingFilter = Array.from(document.querySelectorAll('[data-filter]')).find(button => button.dataset.filter === category); if (matchingFilter) matchingFilter.classList.add('active'); currentFilter = category; expanded = showAll; renderProducts(currentFilter, expanded); }
+document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { selectCategory(button.dataset.filter); }));
+document.querySelectorAll('[data-category]').forEach(card => card.addEventListener('click', event => { event.preventDefault(); selectCategory(card.dataset.category, true); document.querySelector('#trending').scrollIntoView({ behavior: 'smooth', block: 'start' }); }));
 document.querySelector('#loadMore').addEventListener('click', () => { expanded = true; renderProducts(currentFilter, true); });
-document.addEventListener('click', event => {
-  const save = event.target.closest('.save-button');
-  if (!save) return;
-  event.preventDefault(); save.classList.toggle('saved'); save.textContent = save.classList.contains('saved') ? '♥' : '♡';
-});
-
-const menu = document.querySelector('.menu-toggle');
-menu.addEventListener('click', () => { const open = document.body.classList.toggle('menu-open'); menu.setAttribute('aria-expanded', open); });
-document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => { document.body.classList.remove('menu-open'); menu.setAttribute('aria-expanded', 'false'); }));
-
-document.querySelector('#newsletterForm').addEventListener('submit', event => {
-  event.preventDefault(); event.currentTarget.querySelector('.form-message').textContent = "You're on the list!"; event.currentTarget.reset();
-});
+document.addEventListener('click', event => { const save = event.target.closest('.save-button'); if (!save) return; event.preventDefault(); save.classList.toggle('saved'); save.textContent = save.classList.contains('saved') ? '♥' : '♡'; });
+const menu = document.querySelector('.menu-toggle'); menu.addEventListener('click', () => { const open = document.body.classList.toggle('menu-open'); menu.setAttribute('aria-expanded', open); }); document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => { document.body.classList.remove('menu-open'); menu.setAttribute('aria-expanded', 'false'); }));
+document.querySelector('#newsletterForm').addEventListener('submit', event => { event.preventDefault(); event.currentTarget.querySelector('.form-message').textContent = "You're on the list!"; event.currentTarget.reset(); });
 document.querySelector('#year').textContent = new Date().getFullYear();
