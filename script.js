@@ -32,7 +32,23 @@ const collectionGrid = document.querySelector('#collectionGrid');
 const articleGrid = document.querySelector('#articleGrid');
 const slugify = value => value.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const millisecondsPerWeek = 7 * 24 * 60 * 60 * 1000;
-function weeklyRotation(items, filter) { if (items.length < 2) return items; const now = new Date(); const mondayOffset = (now.getUTCDay() + 6) % 7; const monday = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - mondayOffset); const weekNumber = Math.floor(monday / millisecondsPerWeek); const weeklyStep = filter === 'All' ? 5 : 1; const offset = (weekNumber * weeklyStep) % items.length; return [...items.slice(offset), ...items.slice(0, offset)]; }
+const homepageFeature = {
+  titles: ["Light-Up Ceramic Ghost Decorations - 4 Pack", "Jabberin' Jack Talking Animated Pumpkin"],
+  expiresAt: Date.parse("2026-08-24T06:00:00Z")
+};
+function weeklyRotation(items, filter) {
+  if (items.length < 2) return items;
+  const now = new Date();
+  const mondayOffset = (now.getUTCDay() + 6) % 7;
+  const monday = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - mondayOffset);
+  const weekNumber = Math.floor(monday / millisecondsPerWeek);
+  const weeklyStep = filter === 'All' ? 5 : 1;
+  const offset = (weekNumber * weeklyStep) % items.length;
+  const rotated = [...items.slice(offset), ...items.slice(0, offset)];
+  if (filter !== 'All' || now.getTime() >= homepageFeature.expiresAt) return rotated;
+  const featured = homepageFeature.titles.map(title => rotated.find(item => item.title === title)).filter(Boolean);
+  return [...featured, ...rotated.filter(item => !homepageFeature.titles.includes(item.title))];
+}
 function escapeXml(value = '') { return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;').replace(/'/g, '&apos;'); }
 function wrapTitle(title, max = 24) { const words = String(title).split(/\s+/); const lines = []; let line = ''; words.forEach(word => { const next = line ? `${line} ${word}` : word; if (next.length > max && line) { lines.push(line); line = word; } else line = next; }); if (line) lines.push(line); return lines.slice(0, 4); }
 function productFallback(title, category) { const lines = wrapTitle(title).map((line, index) => `<text x="50%" y="${250 + index * 44}" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#3f352d">${escapeXml(line)}</text>`).join(''); const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800"><rect width="800" height="800" fill="#f3eee6"/><circle cx="400" cy="165" r="78" fill="#ded2c2"/><text x="400" y="187" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#6f5c4b">✦</text>${lines}<text x="400" y="475" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" letter-spacing="3" fill="#8b755f">${escapeXml((category || 'THE FIND LIST').toUpperCase())}</text><line x1="250" y1="520" x2="550" y2="520" stroke="#cabba8" stroke-width="2"/><text x="400" y="575" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#5b4a3d">THE FIND LIST</text><text x="400" y="615" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#8b755f">Product image unavailable</text></svg>`; return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`; }
