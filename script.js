@@ -17,6 +17,61 @@ function weeklyRotation(items, filter) {
   return [...items.slice(offset), ...items.slice(0, offset)];
 }
 
+function escapeXml(value = '') {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function wrapTitle(title, max = 24) {
+  const words = String(title).split(/\s+/);
+  const lines = [];
+  let line = '';
+  words.forEach(word => {
+    const next = line ? `${line} ${word}` : word;
+    if (next.length > max && line) {
+      lines.push(line);
+      line = word;
+    } else {
+      line = next;
+    }
+  });
+  if (line) lines.push(line);
+  return lines.slice(0, 4);
+}
+
+function productFallback(title, category) {
+  const lines = wrapTitle(title).map((line, index) =>
+    `<text x="50%" y="${250 + index * 44}" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#3f352d">${escapeXml(line)}</text>`
+  ).join('');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+    <rect width="800" height="800" fill="#f3eee6"/>
+    <circle cx="400" cy="165" r="78" fill="#ded2c2"/>
+    <text x="400" y="187" text-anchor="middle" font-family="Georgia,serif" font-size="58" fill="#6f5c4b">✦</text>
+    ${lines}
+    <text x="400" y="475" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" letter-spacing="3" fill="#8b755f">${escapeXml((category || 'THE FIND LIST').toUpperCase())}</text>
+    <line x1="250" y1="520" x2="550" y2="520" stroke="#cabba8" stroke-width="2"/>
+    <text x="400" y="575" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#5b4a3d">THE FIND LIST</text>
+    <text x="400" y="615" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#8b755f">Product image unavailable</text>
+  </svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function applyImageFallbacks() {
+  document.querySelectorAll('.product-photo').forEach(img => {
+    const fallback = () => {
+      if (img.dataset.fallbackApplied === 'true') return;
+      img.dataset.fallbackApplied = 'true';
+      img.src = productFallback(img.dataset.title || img.alt, img.dataset.category || 'The Find List');
+    };
+    img.addEventListener('error', fallback, { once: true });
+    if (img.complete && img.naturalWidth === 0) fallback();
+  });
+}
+
 categoryGrid.innerHTML = content.categories.map(item => `
   <a class="category-card ${item.color}" href="#trending" data-category="${item.name}">
     <span class="category-icon">${item.icon}</span><span><strong>${item.name}</strong><small>${item.description}</small></span><b>→</b>
@@ -35,12 +90,13 @@ function renderProducts(filter = 'All', expanded = false) {
     <article class="product-card">
       <a class="product-image ${item.color}" href="${item.link}" target="_blank" rel="sponsored nofollow noopener" aria-label="View ${item.title} on Amazon">
         <span class="product-badge">${item.badge}</span>
-        <img class="product-photo" src="${item.image}" alt="${item.title}" loading="lazy" decoding="async" />
+        <img class="product-photo" src="${item.image}" alt="${item.title}" data-title="${item.title.replace(/"/g, '&quot;')}" data-category="${item.category}" loading="lazy" decoding="async" />
         <button class="save-button" aria-label="Save ${item.title}" data-save="${index}">♡</button>
       </a>
       <p class="product-category">${item.category}</p><h3>${item.title}</h3>
       <div class="product-meta"><span>${item.price}</span><a href="blog/${slugify(item.title)}.html">Read guide →</a></div>
     </article>`).join('');
+  applyImageFallbacks();
   document.querySelector('#loadMore').hidden = visible.length === rotated.length;
 }
 renderProducts();
