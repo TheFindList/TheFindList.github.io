@@ -51,7 +51,11 @@ window.siteContent = {
     { title: "Bekith 20-Pack Magnetic Spice Jars", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Fridge organization upgrade", badge: "SMART STORAGE", color: "charcoal", symbol: "▦", link: "https://amzn.to/4zCM6sS" },
     { title: "Caraway 10.5-inch Non-Stick Ceramic Frying Pan", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Everyday cookware pick", badge: "KITCHEN FAVORITE", color: "cream", symbol: "◌", link: "https://amzn.to/4zunUZk" },
     { title: "Kikcoin 3-Piece Ceramic Nonstick Frying Pan Set", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Cookware set", badge: "3-PIECE SET", color: "oat", symbol: "◌", link: "https://amzn.to/4wEfYC7" },
-    { title: "3-Piece Stainless Steel Colander Set", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Prep and pasta essential", badge: "USEFUL FIND", color: "sage", symbol: "◌", link: "https://amzn.to/4gp4ywe" }
+    { title: "3-Piece Stainless Steel Colander Set", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Prep and pasta essential", badge: "USEFUL FIND", color: "sage", symbol: "◌", link: "https://amzn.to/4gp4ywe" },
+    { title: "4-Pack Fall Scented Soy Candle Set", category: "Seasonal", categories: ["Seasonal", "Home"], price: "Apple pie, cinnamon, harvest & wreath", badge: "FALL SCENTS", color: "terracotta", symbol: "☼", link: "https://amzn.to/4gJUnDI" },
+    { title: "P&J Trading Spice Fragrance Oil Set", category: "Seasonal", categories: ["Seasonal", "Home", "Lifestyle"], price: "Cozy home fragrance set", badge: "FALL FAVORITE", color: "gold", symbol: "≈", link: "https://amzn.to/4gshX6G" },
+    { title: "3500 Sq.Ft Smart HVAC Scent Diffuser", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home"], price: "Whole-home fragrance upgrade", badge: "SMART HOME", color: "charcoal", symbol: "⌁", link: "https://amzn.to/3U1FpQK" },
+    { title: "Pura Plus Smart Home Fragrance Diffuser", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home", "Lifestyle"], price: "Smart scent for larger spaces", badge: "SMART HOME", color: "cream", symbol: "✦", link: "https://amzn.to/4zvYIBF" }
   ],
   collections: [
     { title: "The Cozy Apartment List", subtitle: "Warm up your space without a full makeover", number: "01", color: "warm", slug: "cozy-apartment" },
@@ -107,7 +111,11 @@ const productImages = [
   "https://i5.walmartimages.com/seo/20Pcs-Clear-Lid-Magnetic-Stainless-Steel-Spice-Jar-Sauce-Pepper-Seasoning-Storage-Container-Kitchen-Houseware_7ec3d79c-5e19-4932-a39a-e0b4e8113319.a84e9a06e9f0ad1d2d5f28d322361668.jpeg",
   "https://cdn.shopify.com/s/files/1/0606/8109/3269/files/c2c11c9f-7f10-4660-a131-3390b4702cf2.webp?v=1774907439",
   "https://img0.domopolis.ua/img.dp/01a/01a099a3f4cb58ebee168d4f6b91099dx700x700x80.jpg",
-  "https://images.zola.com/ea8026fc-0678-4d4b-b039-28a2c929a7b9?fit=fill&h=640&w=640"
+  "https://images.zola.com/ea8026fc-0678-4d4b-b039-28a2c929a7b9?fit=fill&h=640&w=640",
+  "https://mobileimages.lowes.com/productimages/4f47bfbb-7d76-446b-9e91-0bdf50b8894d/77618433.jpeg?size=pdhz",
+  "https://pandjtrading.com/cdn/shop/files/FR10SCS_MAIN.jpg",
+  "https://www.nebuluxury.com/cdn/shop/files/hvac-beauty2_1200x1200.jpg?v=1756817564",
+  "https://pura.com/cdn/shop/files/PuraPlus-PDP-EC2-V3.png?v=1727116299&width=1200"
 ];
 
 window.siteContent.products.forEach((product, index) => {
