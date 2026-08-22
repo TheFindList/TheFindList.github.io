@@ -1,4 +1,63 @@
 const content = window.siteContent;
+
+content.products.push(
+  {
+    title: "Ninja Crispi 4-in-1 Portable Glass Air Fryer",
+    category: "Kitchen",
+    categories: ["Kitchen", "Home", "Lifestyle"],
+    price: "Viral glass air fryer",
+    badge: "TRENDING",
+    color: "cream",
+    symbol: "✦",
+    link: "https://amzn.to/4zyU6uK",
+    image: "https://www.appliancesonline.com.au/ak/4/f/b/f/4fbf79df5df203b30c7d1bfe6d5cc9e505e9209b_FN101ST_Lifestyle_IMage__7_-high.jpeg?width=814"
+  },
+  {
+    title: "BISSELL Little Green Portable Carpet Cleaner",
+    category: "Home",
+    categories: ["Home", "Lifestyle"],
+    price: "Before-and-after cleaning favorite",
+    badge: "MOST LOVED",
+    color: "sage",
+    symbol: "⌂",
+    link: "https://amzn.to/4ilVpqD",
+    image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/bf134973152c492784b1e45f7bfeb1e6~tplv-fhlh96nyum-crop-webp%3A1500%3A1500.webp?dr=12190&from=2378011839&idc=useast5&ps=933b5bde&shcp=e1be8f53&shp=8dbd94bf&t=555f072d"
+  },
+  {
+    title: "DREO Tower Fan",
+    category: "Tech & Gadgets",
+    categories: ["Tech & Gadgets", "Home"],
+    price: "Quiet room-cooling upgrade",
+    badge: "SMART HOME",
+    color: "charcoal",
+    symbol: "⌁",
+    link: "https://amzn.to/45HeYlS",
+    image: "https://i5.walmartimages.com/seo/Dreo-Tower-Fans-Home-2024-New-90-Oscillating-Standing-Fans-Remote-24-ft-s-Velocity-Quiet-Bedroom-Fan-4-Speeds-4Modes-8H-Timer-Bladeless-Floor-Fan-Bla_5f44859b-8e3c-4a95-b70c-017fc6ce0842.d2571d32588bd41d44524ac97e9684e1.jpeg"
+  },
+  {
+    title: "Umite Chef 33-Piece Silicone Kitchen Utensil Set",
+    category: "Kitchen",
+    categories: ["Kitchen", "Home"],
+    price: "Complete countertop utensil set",
+    badge: "POPULAR",
+    color: "oat",
+    symbol: "▦",
+    link: "https://amzn.to/3Ud2xvz",
+    image: "https://m.media-amazon.com/images/I/41yA-nW0utL._SL500_.jpg"
+  },
+  {
+    title: "Flameless Flickering Candle Set",
+    category: "Seasonal",
+    categories: ["Seasonal", "Home"],
+    price: "Cozy fall glow without the flame",
+    badge: "FALL FAVORITE",
+    color: "terracotta",
+    symbol: "☼",
+    link: "https://amzn.to/4xfjFiL",
+    image: "https://m.media-amazon.com/images/I/71A1n2zgE9L.jpg"
+  }
+);
+
 const categoryGrid = document.querySelector('#categoryGrid');
 const productGrid = document.querySelector('#productGrid');
 const collectionGrid = document.querySelector('#collectionGrid');
