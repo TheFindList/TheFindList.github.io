@@ -47,7 +47,11 @@ window.siteContent = {
     { title: "Alpha Grillers Instant-Read Digital Meat Thermometer", category: "Kitchen", price: "Cooking confidence", badge: "KITCHEN PICK", color: "terracotta", symbol: "↗", link: "https://amzn.to/3U7ipQo" },
     { title: "Easy-Pour Glass Oil Dispenser", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Mess-free cooking helper", badge: "KITCHEN FIND", color: "gold", symbol: "↗", link: "https://amzn.to/4wGxm9u" },
     { title: "Magnetic Refrigerator Spice Rack", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Counter-space saver", badge: "SMART STORAGE", color: "charcoal", symbol: "▦", link: "https://amzn.to/3SIjy0e" },
-    { title: "Space-Saving Kitchen Strainer", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Easy prep essential", badge: "USEFUL FIND", color: "sage", symbol: "◌", link: "https://amzn.to/4hNyODk" }
+    { title: "Space-Saving Kitchen Strainer", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Easy prep essential", badge: "USEFUL FIND", color: "sage", symbol: "◌", link: "https://amzn.to/4hNyODk" },
+    { title: "Bekith 20-Pack Magnetic Spice Jars", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Fridge organization upgrade", badge: "SMART STORAGE", color: "charcoal", symbol: "▦", link: "https://amzn.to/4zCM6sS" },
+    { title: "Caraway 10.5-inch Non-Stick Ceramic Frying Pan", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Everyday cookware pick", badge: "KITCHEN FAVORITE", color: "cream", symbol: "◌", link: "https://amzn.to/4zunUZk" },
+    { title: "Kikcoin 3-Piece Ceramic Nonstick Frying Pan Set", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Cookware set", badge: "3-PIECE SET", color: "oat", symbol: "◌", link: "https://amzn.to/4wEfYC7" },
+    { title: "3-Piece Stainless Steel Colander Set", category: "Kitchen", categories: ["Kitchen", "Home"], price: "Prep and pasta essential", badge: "USEFUL FIND", color: "sage", symbol: "◌", link: "https://amzn.to/4gp4ywe" }
   ],
   collections: [
     { title: "The Cozy Apartment List", subtitle: "Warm up your space without a full makeover", number: "01", color: "warm", slug: "cozy-apartment" },
@@ -99,7 +103,11 @@ const productImages = [
   "https://i5.walmartimages.com/seo/Alpha-Grillers-Meat-Thermometer-Digital-Instant-Read-Food-Thermometer-Cooking-Grilling-Air-Fryer-Griddle-Probe-Kitchen-Gadgets-Essentials-BBQ-Accesso_e6ca56b3-337f-49b5-bb6a-f5b4f910d2a1.9fec8ebdcb1b79155d7016a45e986fc9.jpeg",
   "https://www.shukanmall.com/product-img/Glass-Oil-Bottle-With-Ergonomi1-1678788678.jpg",
   "https://i.ebayimg.com/images/g/wX8AAOSwEqxnCUve/s-l1200.png",
-  "https://slimages.macysassets.com/is/image/MCY/products/1/optimized/22801891_fpx.tif?fit=fit%2C1&hei=855&op_sharpen=1&wid=700"
+  "https://slimages.macysassets.com/is/image/MCY/products/1/optimized/22801891_fpx.tif?fit=fit%2C1&hei=855&op_sharpen=1&wid=700",
+  "https://i5.walmartimages.com/seo/20Pcs-Clear-Lid-Magnetic-Stainless-Steel-Spice-Jar-Sauce-Pepper-Seasoning-Storage-Container-Kitchen-Houseware_7ec3d79c-5e19-4932-a39a-e0b4e8113319.a84e9a06e9f0ad1d2d5f28d322361668.jpeg",
+  "https://cdn.shopify.com/s/files/1/0606/8109/3269/files/c2c11c9f-7f10-4660-a131-3390b4702cf2.webp?v=1774907439",
+  "https://img0.domopolis.ua/img.dp/01a/01a099a3f4cb58ebee168d4f6b91099dx700x700x80.jpg",
+  "https://images.zola.com/ea8026fc-0678-4d4b-b039-28a2c929a7b9?fit=fill&h=640&w=640"
 ];
 
 window.siteContent.products.forEach((product, index) => {
