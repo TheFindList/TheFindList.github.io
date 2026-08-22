@@ -55,7 +55,9 @@ window.siteContent = {
     { title: "4-Pack Fall Scented Soy Candle Set", category: "Seasonal", categories: ["Seasonal", "Home"], price: "Apple pie, cinnamon, harvest & wreath", badge: "FALL SCENTS", color: "terracotta", symbol: "☼", link: "https://amzn.to/4gJUnDI" },
     { title: "P&J Trading Spice Fragrance Oil Set", category: "Seasonal", categories: ["Seasonal", "Home", "Lifestyle"], price: "Cozy home fragrance set", badge: "FALL FAVORITE", color: "gold", symbol: "≈", link: "https://amzn.to/4gshX6G" },
     { title: "3500 Sq.Ft Smart HVAC Scent Diffuser", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home"], price: "Whole-home fragrance upgrade", badge: "SMART HOME", color: "charcoal", symbol: "⌁", link: "https://amzn.to/3U1FpQK" },
-    { title: "Pura Plus Smart Home Fragrance Diffuser", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home", "Lifestyle"], price: "Smart scent for larger spaces", badge: "SMART HOME", color: "cream", symbol: "✦", link: "https://amzn.to/4zvYIBF" }
+    { title: "Pura Plus Smart Home Fragrance Diffuser", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home", "Lifestyle"], price: "Smart scent for larger spaces", badge: "SMART HOME", color: "cream", symbol: "✦", link: "https://amzn.to/4zvYIBF" },
+    { title: "200ML Ceramic Essential Oil Stone Diffuser", category: "Home", categories: ["Home", "Lifestyle", "Tech & Gadgets"], price: "Minimalist home fragrance", badge: "COZY HOME", color: "cream", symbol: "≈", link: "https://amzn.to/4c4kH8Y" },
+    { title: "Large-Room Aroma Diffuser + 10 Essential Oils", category: "Home", categories: ["Home", "Lifestyle", "Tech & Gadgets"], price: "Ambient light & cool mist", badge: "AROMA SET", color: "oat", symbol: "✦", link: "https://amzn.to/3SRSuM5" }
   ],
   collections: [
     { title: "The Cozy Apartment List", subtitle: "Warm up your space without a full makeover", number: "01", color: "warm", slug: "cozy-apartment" },
@@ -115,7 +117,9 @@ const productImages = [
   "https://mobileimages.lowes.com/productimages/4f47bfbb-7d76-446b-9e91-0bdf50b8894d/77618433.jpeg?size=pdhz",
   "https://pandjtrading.com/cdn/shop/files/FR10SCS_MAIN.jpg",
   "https://www.nebuluxury.com/cdn/shop/files/hvac-beauty2_1200x1200.jpg?v=1756817564",
-  "https://pura.com/cdn/shop/files/PuraPlus-PDP-EC2-V3.png?v=1727116299&width=1200"
+  "https://pura.com/cdn/shop/files/PuraPlus-PDP-EC2-V3.png?v=1727116299&width=1200",
+  "https://multimedia.bbycastatic.ca/multimedia/products/500x500/185/18585/18585411.jpeg",
+  "https://cdn.instant-upload.shop/cdn/1244/2024/0911/main-Ultimate-Aromatherapy-Diffuser-ampamp-Essential-Oil-Set-Ultrasonic-Top-10-Oils-Modern-with-4-Timer-7-Ambient-Light-Settings-Therapeutic-Grade-Lavender-1668909-501681.jpg"
 ];
 
 window.siteContent.products.forEach((product, index) => {
