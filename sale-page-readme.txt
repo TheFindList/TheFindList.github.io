@@ -1,0 +1,1 @@
+The On Sale RN page is powered by content.js. It shows only products with onSale: true. Optional sale fields: regularPrice, salePrice, discount. This prevents stale or unverified deals from appearing automatically.
