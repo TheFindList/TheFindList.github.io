@@ -1,0 +1,8 @@
+To show a product on the On Sale RN page, add these optional fields to its object in content.js:
+
+onSale: true,
+regularPrice: "$39.99",
+salePrice: "$29.99",
+discount: "25% OFF"
+
+Set onSale to false (or remove it) when the sale ends. The On Sale RN page only displays products with onSale === true.
