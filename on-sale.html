@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>On Sale RN | The Find List</title>
+  <link rel="stylesheet" href="site-pages.css" />
+  <link rel="stylesheet" href="collection.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">The Find List</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="on-sale.html" aria-current="page">On Sale RN 🔥</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">DEALS WORTH CHECKING</p>
+      <h1>On Sale RN 🔥</h1>
+      <p>Current markdowns from products already featured on The Find List. Prices can change quickly, so always confirm the final price at checkout.</p>
+    </section>
+
+    <section>
+      <div id="saleProducts" class="product-grid"></div>
+      <div id="noSales" class="empty-state" hidden>
+        <h2>No confirmed sales right now</h2>
+        <p>Check back soon — new discounts will appear here as soon as we mark them active.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="content.js"></script>
+  <script>
+    const products = (window.siteContent && window.siteContent.products) || [];
+    const saleProducts = products.filter(product => product.onSale === true);
+    const container = document.getElementById('saleProducts');
+    const empty = document.getElementById('noSales');
+
+    if (!saleProducts.length) {
+      empty.hidden = false;
+    } else {
+      saleProducts.forEach(product => {
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        const discount = product.discount ? `<span class="product-badge">${product.discount}</span>` : '<span class="product-badge">ON SALE</span>';
+        const pricing = product.salePrice
+          ? `<p class="product-price"><strong>${product.salePrice}</strong>${product.regularPrice ? ` <s>${product.regularPrice}</s>` : ''}</p>`
+          : `<p class="product-price">${product.price || 'Sale find'}</p>`;
+        card.innerHTML = `
+          <div class="product-card__top">${discount}</div>
+          <h2>${product.title}</h2>
+          ${pricing}
+          <p>${product.category || ''}</p>
+          <a class="button" href="${product.link}" target="_blank" rel="nofollow sponsored noopener">Check current price ↗</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
