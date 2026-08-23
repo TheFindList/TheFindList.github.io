@@ -1,0 +1,2 @@
+Navigation link to use on site pages:
+<a href="on-sale.html">On Sale RN 🔥</a>
