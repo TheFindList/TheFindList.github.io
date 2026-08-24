@@ -1,7 +1,7 @@
 /* Homepage products kept separate so product detail pages use the same catalog. */
-const content = window.siteContent;
+const featuredContent = window.siteContent;
 
-content.products.push(
+featuredContent.products.push(
   { title: "Ninja Crispi 4-in-1 Portable Glass Air Fryer", category: "Kitchen", categories: ["Kitchen", "Home", "Lifestyle"], price: "Viral glass air fryer", badge: "TRENDING", color: "cream", symbol: "✦", link: "https://amzn.to/4zyU6uK", image: "https://www.appliancesonline.com.au/ak/4/f/b/f/4fbf79df5df203b30c7d1bfe6d5cc9e505e9209b_FN101ST_Lifestyle_IMage__7_-high.jpeg?width=814" },
   { title: "BISSELL Little Green Portable Carpet Cleaner", category: "Home", categories: ["Home", "Lifestyle"], price: "Before-and-after cleaning favorite", badge: "MOST LOVED", color: "sage", symbol: "⌂", link: "https://amzn.to/4ilVpqD", image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/bf134973152c492784b1e45f7bfeb1e6~tplv-fhlh96nyum-crop-webp%3A1500%3A1500.webp?dr=12190&from=2378011839&idc=useast5&ps=933b5bde&shcp=e1be8f53&shp=8dbd94bf&t=555f072d" },
   { title: "DREO Tower Fan", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home"], price: "Quiet room-cooling upgrade", badge: "SMART HOME", color: "charcoal", symbol: "⌁", link: "https://amzn.to/45HeYlS", image: "https://i5.walmartimages.com/seo/Dreo-Tower-Fans-Home-2024-New-90-Oscillating-Standing-Fans-Remote-24-ft-s-Velocity-Quiet-Bedroom-Fan-4-Speeds-4Modes-8H-Timer-Bladeless-Floor-Fan-Bla_5f44859b-8e3c-4a95-b70c-017fc6ce0842.d2571d32588bd41d44524ac97e9684e1.jpeg" },
@@ -9,8 +9,8 @@ content.products.push(
   { title: "Flameless Flickering Candle Set", category: "Seasonal", categories: ["Seasonal", "Home", "Decorations"], price: "Cozy fall glow without the flame", badge: "FALL FAVORITE", color: "terracotta", symbol: "☼", link: "https://amzn.to/4xfjFiL", image: "https://m.media-amazon.com/images/I/71A1n2zgE9L.jpg" }
 );
 
-content.categories.push({ name: "Decorations", icon: "✦", color: "terracotta", description: "Fall, Halloween & festive accents" });
-content.products.push(
+featuredContent.categories.push({ name: "Decorations", icon: "✦", color: "terracotta", description: "Fall, Halloween & festive accents" });
+featuredContent.products.push(
   { title: "Artificial Fall Maple Leaf Garland", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Mantel & staircase favorite", badge: "FALL DECOR", color: "terracotta", symbol: "⌁", link: "https://amzn.to/4qyYDJy", image: "https://mobileimages.lowes.com/productimages/0ea2503b-3b7c-4937-8d94-33c2665606df/83097563.jpeg?size=pdhism" },
   { title: "Mini Velvet Pumpkin Decoration Set", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Cozy tabletop accent", badge: "FALL FAVORITE", color: "gold", symbol: "◌", link: "https://amzn.to/4i7Klxx", image: "https://i.etsystatic.com/36215591/r/il/9479f2/7111228484/il_1080xN.7111228484_dbqc.jpg" },
   { title: "46.5-inch Lighted Animated Floating Ghost", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Animated Halloween statement piece", badge: "HALLOWEEN", color: "cream", symbol: "✦", link: "https://amzn.to/4hPkyKk", image: "https://jubileegiftshop.com/cdn/shop/files/401126MBL_3.jpg?v=1689791322&width=1200" },
