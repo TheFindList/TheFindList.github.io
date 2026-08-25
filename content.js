@@ -66,6 +66,7 @@ window.siteContent = {
     { title: "Actually Useful Viral Finds", subtitle: "The internet made us try them", number: "03", color: "green", slug: "actually-useful-viral-finds" }
   ],
   articles: [
+    { title: "How to Build the Perfect Boo Basket 👻", tag: "HALLOWEEN", read: "5 min read", color: "terracotta", link: "blog/boo-basket-ideas-2026.html" },
     { title: "10 easy ways to make your apartment feel instantly cozier", tag: "HOME", read: "6 min read", color: "terracotta" },
     { title: "The small upgrades that make mornings feel less rushed", tag: "LIFESTYLE", read: "4 min read", color: "sage" },
     { title: "What we're saving this week: five finds under $40", tag: "THE WEEKLY FIVE", read: "3 min read", color: "gold" }
