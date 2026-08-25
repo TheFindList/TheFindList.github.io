@@ -26,3 +26,17 @@ featuredContent.products.push(
   { title: "Fall Decorative Lantern", category: "Decorations", categories: ["Decorations", "Seasonal", "Home"], price: "Porch, mantel & tabletop accent", badge: "COZY GLOW", color: "oat", symbol: "☼", link: "https://amzn.to/4qyZpGs", image: "https://f.twojstyl.pl/twojstyl_prod_2025_09/article_content_vertical-1756898929ddcfe0-downloajesienne-dekoracje-okna16.jpeg" },
   { title: "Jabberin' Jack Talking Animated Pumpkin", category: "Decorations", categories: ["Decorations", "Seasonal", "Home", "Tech & Gadgets"], price: "8-inch screen, projector & speaker", badge: "TALKING PUMPKIN", color: "terracotta", symbol: "🎃", link: "https://amzn.to/46gkMmr", image: "https://cdn11.bigcommerce.com/s-lxyj9b/images/stencil/1280x1280/products/17408/41065/Jabberin_Jack%C2%A0Orange_Animated_Pumpkin__2__27074.1694436495.jpg?c=2" }
 );
+
+/* Temporary 58-hour fragrance feature: automatically stops after Aug 27, 2026 at 7:49 AM MDT. */
+const fragranceFeatureEnds = Date.parse("2026-08-27T07:49:00-06:00");
+if (Date.now() < fragranceFeatureEnds) {
+  const fragranceTerms = ["candle", "diffuser"];
+  const featuredFragrance = [];
+  const remainingProducts = [];
+  featuredContent.products.forEach((product) => {
+    const title = String(product.title || "").toLowerCase();
+    if (fragranceTerms.some((term) => title.includes(term))) featuredFragrance.push(product);
+    else remainingProducts.push(product);
+  });
+  featuredContent.products.splice(0, featuredContent.products.length, ...featuredFragrance, ...remainingProducts);
+}
