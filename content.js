@@ -67,6 +67,7 @@ window.siteContent = {
     { title: "Actually Useful Viral Finds", subtitle: "The internet made us try them", number: "03", color: "green", slug: "actually-useful-viral-finds" }
   ],
   articles: [
+    { title: "Fall Dorm Decor Ideas: 10 Cozy Small-Space Upgrades", tag: "DORM & APARTMENT", read: "7 min read", color: "gold", link: "blog/fall-dorm-decor-ideas-2026.html" },
     { title: "How to Build the Perfect Boo Basket 👻", tag: "HALLOWEEN", read: "5 min read", color: "terracotta", link: "blog/boo-basket-ideas-2026.html" },
     { title: "10 easy ways to make your apartment feel instantly cozier", tag: "HOME", read: "6 min read", color: "terracotta" },
     { title: "The small upgrades that make mornings feel less rushed", tag: "LIFESTYLE", read: "4 min read", color: "sage" },
