@@ -58,7 +58,8 @@ window.siteContent = {
     { title: "Pura Plus Smart Home Fragrance Diffuser", category: "Tech & Gadgets", categories: ["Tech & Gadgets", "Home", "Lifestyle"], price: "Smart scent for larger spaces", badge: "SMART HOME", color: "cream", symbol: "✦", link: "https://amzn.to/4zvYIBF" },
     { title: "200ML Ceramic Essential Oil Stone Diffuser", category: "Home", categories: ["Home", "Lifestyle", "Tech & Gadgets"], price: "Minimalist home fragrance", badge: "COZY HOME", color: "cream", symbol: "≈", link: "https://amzn.to/4c4kH8Y" },
     { title: "Large-Room Aroma Diffuser + 10 Essential Oils", category: "Home", categories: ["Home", "Lifestyle", "Tech & Gadgets"], price: "Ambient light & cool mist", badge: "AROMA SET", color: "oat", symbol: "✦", link: "https://amzn.to/3SRSuM5" },
-    { title: "MacKenzie-Childs Courtly Check Large Enamel Canister", category: "Kitchen", categories: ["Kitchen", "Home", "Decorations"], price: "Statement countertop storage", badge: "DESIGNER FIND", color: "charcoal", symbol: "▦", link: "https://amzn.to/4wXk9JK" }
+    { title: "MacKenzie-Childs Courtly Check Large Enamel Canister", category: "Kitchen", categories: ["Kitchen", "Home", "Decorations"], price: "Statement countertop storage", badge: "DESIGNER FIND", color: "charcoal", symbol: "▦", link: "https://amzn.to/4wXk9JK" },
+    { title: "Ninja® PossibleCooker™ PLUS 12-in-1, 8.5-qt, Black, MC1010", category: "Kitchen", categories: ["Kitchen", "Home", "Lifestyle"], price: "12-in-1 multicooker", badge: "KITCHEN POWERHOUSE", color: "charcoal", symbol: "♨", link: "https://amzn.to/4qIwS1k" }
   ],
   collections: [
     { title: "The Cozy Apartment List", subtitle: "Warm up your space without a full makeover", number: "01", color: "warm", slug: "cozy-apartment" },
@@ -122,7 +123,8 @@ const productImages = [
   "https://pura.com/cdn/shop/files/PuraPlus-PDP-EC2-V3.png?v=1727116299&width=1200",
   "https://multimedia.bbycastatic.ca/multimedia/products/500x500/185/18585/18585411.jpeg",
   "https://cdn.instant-upload.shop/cdn/1244/2024/0911/main-Ultimate-Aromatherapy-Diffuser-ampamp-Essential-Oil-Set-Ultrasonic-Top-10-Oils-Modern-with-4-Timer-7-Ambient-Light-Settings-Therapeutic-Grade-Lavender-1668909-501681.jpg",
-  "https://i5.samsclubimages.com/asr/50a217a8-a801-4651-921c-7bb9e2fffa68.8d285ae71e9edf6d4a01860f204851f0.jpeg"
+  "https://i5.samsclubimages.com/asr/50a217a8-a801-4651-921c-7bb9e2fffa68.8d285ae71e9edf6d4a01860f204851f0.jpeg",
+  "https://m.media-amazon.com/images/I/71dDSYSIQoL._AC_SL1500_.jpg"
 ];
 
 window.siteContent.products.forEach((product, index) => {
