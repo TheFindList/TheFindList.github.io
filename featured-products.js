@@ -41,4 +41,4 @@ if (Date.now() < fragranceFeatureEnds) {
   featuredContent.products.splice(0, featuredContent.products.length, ...featuredFragrance, ...remainingProducts);
 }
 
-window.siteContent.products.push({"title": "Halloween Light-Up Ghosts with Witch Hats", "category": "Decorations", "categories": ["Decorations", "Seasonal", "Home"], "price": "Indoor Halloween decor", "badge": "HALLOWEEN GLOW", "color": "cream", "symbol": "\ud83d\udc7b", "link": "https://amzn.to/4h7AVB0", "image": "assets/products/halloween-light-up-ghosts-with-witch-hats.png"});
+window.siteContent.products.push({"title": "Halloween Light-Up Ghosts with Witch Hats", "category": "Decorations", "categories": ["Decorations", "Seasonal", "Home"], "price": "Indoor Halloween decor", "badge": "HALLOWEEN GLOW", "color": "cream", "symbol": "\ud83d\udc7b", "link": "https://amzn.to/4h7AVB0", "image": "assets/products/halloween-light-up-ghosts-pin.png"});
