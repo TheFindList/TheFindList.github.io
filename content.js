@@ -69,9 +69,9 @@ window.siteContent = {
   articles: [
     { title: "Fall Dorm Decor Ideas: 10 Cozy Small-Space Upgrades", tag: "DORM & APARTMENT", read: "7 min read", color: "gold", link: "blog/fall-dorm-decor-ideas-2026.html" },
     { title: "How to Build the Perfect Boo Basket 👻", tag: "HALLOWEEN", read: "5 min read", color: "terracotta", link: "blog/boo-basket-ideas-2026.html" },
-    { title: "10 easy ways to make your apartment feel instantly cozier", tag: "HOME", read: "6 min read", color: "terracotta" },
-    { title: "The small upgrades that make mornings feel less rushed", tag: "LIFESTYLE", read: "4 min read", color: "sage" },
-    { title: "What we're saving this week: five finds under $40", tag: "THE WEEKLY FIVE", read: "3 min read", color: "gold" }
+    { title: "7 Cheap Ways to Make Your Home Feel Like Fall", tag: "HOME", read: "Read guide", color: "terracotta", link: "blog/cheap-fall-home-refresh-ideas-2026.html" },
+    { title: "Fall Coffee Bar Ideas for a Cozy Counter", tag: "HOME", read: "Read guide", color: "sage", link: "blog/fall-coffee-bar-ideas-2026.html" },
+    { title: "How to Make Your House Look Haunted", tag: "HALLOWEEN", read: "Read guide", color: "gold", link: "blog/how-to-make-your-house-look-haunted-2026.html" }
   ]
 };
 
